@@ -1,23 +1,22 @@
 const fsp = require('fs/promises');
 const path = require('path');
 
+//nice: configure all of this in config.json
 const SCHEMAS = [
     'color-theme.json',
     'textmate-colors.json',
     'token-styling.json',
     'workbench-colors.json',
 ];
-//todo Change to https://github.com/andymcintosh/vscode-schemas (recently updated). Original is unmaintained.
-//nice-TBD Or maybe keep my own fork? Run the save-vscode-schemas extension myself (headless vscode?) and point to that repo from here.
-const BASE_URL = 'https://raw.githubusercontent.com/wraith13/vscode-schemas/refs/heads/master/en/latest/schemas/';
-const ROOT_DIR = path.join(__dirname, '..', '..');
-const SCHEMAS_DIR = path.join(ROOT_DIR, '.vscode', 'schemas');
+const ROOT_DIR = path.join(__dirname, '..');
+const SCHEMAS_DIR = path.join(ROOT_DIR, 'schemas');
+const SRC_DIR = path.join(SCHEMAS_DIR, 'v0');
+const DEST_DIR = path.join(SCHEMAS_DIR, 'v1');
 
+// PRE: the JSON Schemas for the current version of VS Code are already in schemas/v0.
 module.exports = async () => {
-    await downloadSchemaFiles();
-
     for (const schemaFile of SCHEMAS) {
-        const schemaPath = path.join(SCHEMAS_DIR, schemaFile);
+        const schemaPath = path.join(SRC_DIR, schemaFile);
         const schemaString = await fsp.readFile(schemaPath, 'utf-8');
         const schema = JSON.parse(schemaString);
 
@@ -26,26 +25,15 @@ module.exports = async () => {
             newSchema = addMainSchemaAnnotations(newSchema);
         }
 
+        //nice: configure format in config.json
         const newSchemaString = JSON.stringify(newSchema, null, 4);
-        await fsp.writeFile(schemaPath, newSchemaString);
+        const newSchemaPath = path.join(DEST_DIR, schemaFile);
+        await fsp.writeFile(newSchemaPath, newSchemaString);
     }
 };
 
 if (require.main === module) {
     module.exports();
-}
-
-//nice: install wraith13/save-vscode-schemas itself, run it as a workspace task, then all of this.
-//      pros: won't depend on a repo that may be outdated. / cons: tasks are tricky to configure.
-async function downloadSchemaFiles() {
-    console.log('downloading schemas...')
-    for (const schema of SCHEMAS) {
-        const response = await fetch(BASE_URL + schema);
-        const content = await response.text();
-        const schemaPath = path.join(SCHEMAS_DIR, schema);
-        await fsp.writeFile(schemaPath, content);
-    }
-    console.log('downloads finished')
 }
 
 function adaptIncompatibleBits(schema) {

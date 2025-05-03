@@ -77,6 +77,7 @@ tags/releases in this project should correspond to vscode releases, e.g. vscode-
   - Then `npm i`, do `Debug: Start Debugging` and run the extension's command: `Save VS Code's Schemas`.
   - Copy the saved schemas into this project under `schemas/v0`.
 - `patch-schemas.js` patches those schemas so they allow the extra features.
+  - They take the base VS Code schemas in `v0/` and output the result in `v1`.
 
 ## Credit
 
