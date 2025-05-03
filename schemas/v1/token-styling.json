@@ -10,10 +10,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -26,10 +26,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -42,10 +42,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -58,10 +58,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -74,10 +74,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -90,10 +90,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -106,10 +106,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -122,10 +122,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -138,10 +138,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -154,10 +154,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -170,10 +170,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -186,10 +186,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -202,10 +202,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -218,10 +218,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -235,10 +235,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -251,10 +251,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -267,10 +267,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -283,10 +283,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -299,10 +299,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -315,10 +315,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -331,10 +331,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -347,10 +347,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -363,10 +363,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -379,10 +379,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -395,10 +395,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -411,10 +411,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -427,10 +427,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -443,10 +443,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -459,10 +459,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -475,10 +475,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -491,10 +491,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         },
@@ -507,10 +507,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         }
@@ -524,10 +524,10 @@
             ],
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "#/$defs/_0"
                 },
                 {
-                    "$ref": "#/definitions/style"
+                    "$ref": "#/$defs/_1"
                 }
             ]
         }
@@ -629,6 +629,14 @@
                     }
                 }
             ]
+        }
+    },
+    "$defs": {
+        "_0": {
+            "$ref": "yaml-color-property.yml"
+        },
+        "_1": {
+            "$ref": "#/definitions/style"
         }
     }
 }
