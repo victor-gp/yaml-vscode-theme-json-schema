@@ -70,9 +70,20 @@ further versions could introduce more features...
 tags/releases in this project should correspond to vscode releases, e.g. vscode-v1.99.0
 -->
 
+## Development
+
+- `save-vscode-schemas` (extension) gets the VS Code set of schemas, we filter the `color-theme` related ones.
+  - The extension isn't available on the VS Marketplace. You have to clone it locally.
+  - Then `npm i`, do `Debug: Start Debugging` and run the extension's command: `Save VS Code's Schemas`.
+  - Copy the saved schemas into this project under `schemas/v0`.
+- `patch-schemas.js` patches those schemas so they allow the extra features.
+
 ## Credit
 
-@wraith13 for [save-vscode-schemas](https://github.com/wraith13/save-vscode-schemas), which retrieves VS Code's internal JSON Schemas (`vscode://schemas/*`).
+@wraith13 for their VS Code schema-related projects:
+
+- We used the schemas provided in [vscode-schemas](https://github.com/wraith13/vscode-schemas)  as the base for ours while the schemas still lived in [vscode-lucario-theme](https://github.com/victor-gp/lucario-vscode-theme).
+- We're using the [save-vscode-schemas](https://github.com/wraith13/save-vscode-schemas) extension to retrieve them in this project.
 
 ## License
 
