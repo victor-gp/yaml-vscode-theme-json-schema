@@ -2,7 +2,21 @@
 
 JSON Schema files for VS Code themes written in YAML, with the extra features supported in projects like [Dracula for Visual Studio Code](https://github.com/dracula/visual-studio-code) and [Lucario Theme for VS Code](https://github.com/victor-gp/lucario-vscode-theme).
 
-Those extra features are:
+## Motivation
+
+The `color-theme` set of JSON Schemas from VS Code provide great Intellisense while developing a JSON VS Code theme. They properly describe each themable element in the workbench, provide useful snippets for many properties, etc.
+
+YAML files can validate with JSON Schemas alright, so YAML themes are theoretically able to benefit from that wealth of Intellisense hints.
+But the VS Code schemas are not applicable for a couple of reasons:
+
+1. They're served on a `vscode://` URI, which is not accessible for the [YAML extension](https://github.com/redhat-developer/vscode-yaml) that provides JSON Schema validation for YAML files.
+2. Even if they were accessible, they don't include support for the extra features that YAML VS Code themes can use, so we'd get a needless array of validation errors.
+
+This project provides schemas that solve both these issues.
+
+## Extra features
+
+These are the extra features afforded to YAML themes:
 
 - anchors (`&`) and aliases (`*`): define a color or style once and reference it by name everyhwere else, like variables.
   - this is out-of-the-box for YAML to JSON conversion, it doesn't require any schema modifications.
