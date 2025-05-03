@@ -62,7 +62,9 @@ Where:
 
 <!--TODO version this feature support
 this should be yaml-vscode-theme v1.
-v2 should extend null support for both token colors scopes.
+v2 should extend null support for both token colors scopes. maybe also fontStyle.
+v3 could limit alpha values to strings only, adressing that blindspot in our schema. (this would be breaking for Dracula)
+v0 could be just the vscode themes, without any extra features.
 at the directory level. keep both v1 and v2-v<i>
 further versions could introduce more features...
 tags/releases in this project should correspond to vscode releases, e.g. vscode-v1.99.0
