@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "description": "JSON Schema for VS Code themes written in YAML",
   "scripts": {
-    "patch": "node ./scripts/patch-vscode-schemas.js"
+    "patch": "node ./scripts/patch-vscode-schemas.js",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "vitest": "^3.1.2"
   },
   "repository": {
     "type": "git",
