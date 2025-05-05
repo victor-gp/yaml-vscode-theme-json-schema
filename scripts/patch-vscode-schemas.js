@@ -11,7 +11,7 @@ const SCHEMAS = [
 const ROOT_DIR = path.join(__dirname, '..');
 const SCHEMAS_DIR = path.join(ROOT_DIR, 'schemas');
 const SRC_DIR = path.join(SCHEMAS_DIR, 'v0');
-const DEST_DIR = path.join(SCHEMAS_DIR, 'v1');
+const DEST_DIR = path.join(SCHEMAS_DIR, 'v1.0');
 
 // PRE: the JSON Schemas for the current version of VS Code are already in schemas/v0.
 module.exports = async () => {
@@ -68,7 +68,7 @@ function replaceVscodeUris(schema) {
 // - null values: usually placeholders for a color setting
 // - !alpha tags with color-hex + alpha channel
 // our custom yaml-color-hex schema covers them
-function replaceColorHexTypes(schema) {
+function replaceColorHexTypes(schema, parents = []) {
     if (schema['type'] === 'string' && schema['format'] === 'color-hex') {
         delete schema['type'];
         delete schema['format'];
