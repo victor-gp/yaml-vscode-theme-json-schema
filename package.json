@@ -7,8 +7,11 @@
     "test": "vitest"
   },
   "devDependencies": {
+    "@types/node": "^22.15.3",
     "ajv": "^8.11.0",
-    "vitest": "^3.1.2"
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.2",
+    "yaml": "^2.7.1"
   },
   "repository": {
     "type": "git",

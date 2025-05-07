@@ -1,0 +1,658 @@
+name: Lucario
+type: dark
+# semanticHighlighting: true
+
+palette:
+  base:
+    - &BG       "#2b3e50"
+    - &FG       "#f8f8f2"
+    - &Accent   "#5c98cd"
+    - &Cyan     "#66d9ef"
+    - &Green    "#72c05d"
+    - &Orange   "#ffab28"
+    - &Pink     "#ca94ff"
+    - &Red      "#ff6541"
+    - &Yellow   "#e6db74"
+    - &LineHighlight  "#243443"
+    - &Selection      "#19242f"
+  ui: # like Atom One Dark
+    - &bg-lv-1          "#243343"
+    - &bg-lv-2          "#19242f"
+    - &bg-lv-3          "#141c25"
+    - &bg-lv-1-hover    "#27384a"
+    - &bg-lv-3-hover    "#1e2c39"
+    - &bg-lv-3-active   "#19242f"
+    - &border-base      "#0f161c"
+    - &fg-base          "#99a8b8"
+    - &fg-dim-1         !alpha [*fg-base, b0]
+    - &fg-dim-2         !alpha [*fg-base, 99]
+    - &fg-highlight     "#d5dbe2"
+    - &fg-selected      "#fff"
+    - &fg-separator     !alpha [*fg-base, 50]
+  other:
+    - &NonText        "#61bbc8" #todo: replace Invisibles?
+    - &HintGreen      "#a6e22e"
+    - &HintYellow     "#f0cc04"
+    - &HintRed        "#f92672"
+    - &transparent    !alpha ["#f00", 0]
+  tmp:
+    - &BgTint1        "#344a5e" # luminance + 5
+    - &AccentTint1    "#65a6df" # Accent { luminance + 5 }
+    - &Invalid      "#f8f8f0" # aka: Border
+    - &DiffHeader   "#75715e"
+    - &Invisibles   "#666666"
+
+# ---------------------------------------------------------------------------- #
+
+colors:
+  # UI colors (non-syntax)
+  # Reference: https://code.visualstudio.com/api/references/theme-color
+
+  editor.background: *BG
+  editor.foreground: *FG
+  editorCursor.foreground: *FG
+  editor.lineHighlightBackground: *LineHighlight
+  editor.selectionBackground: *Selection
+
+  editorLineNumber.foreground: !alpha [*FG, 80]
+  editorLineNumber.activeForeground: *FG
+  editorGutter.addedBackground: *HintGreen
+  editorGutter.modifiedBackground: *HintYellow
+  #fixme: this should definitely not be the same as errorForeground
+  # deleted should be magenta, while error should be red?
+  editorGutter.deletedBackground: *HintRed
+  editorGutter.foldingControlForeground: *FG
+
+  editorWhitespace.foreground: *Invisibles
+  editorIndentGuide.background1: !alpha [*Invisibles, 64]
+  editorIndentGuide.activeBackground1: *Invisibles
+  editorRuler.foreground: !alpha [*Invisibles, 64]
+
+  # Base colors
+  focusBorder: !alpha [*Accent, c0]
+  foreground: *FG #fixme: change for fg-base and propagate
+  # disabledForeground: !alpha [*fg-base, b0]
+  disabledForeground: *fg-dim-1
+  widget.shadow: # default is fine, black with low alpha
+  selection.background: *Selection
+  descriptionForeground: # ???
+  errorForeground: *HintRed
+  icon.foreground: # default is ok, #c5c5c5
+  sash.hoverBorder: # <= focusBorder
+
+  # Side Bar
+  sideBar.background: *bg-lv-3
+  sideBar.foreground: *fg-base
+  sideBar.border: *border-base
+  sideBar.dropBackground: #todo
+  sideBarTitle.foreground: # <= sideBar.foreground
+  sideBarSectionHeader.background: *bg-lv-2 #todo: consider lv-3 (with a stronger border)
+  sideBarSectionHeader.foreground: # <= sideBar.foreground
+  sideBarSectionHeader.border: *border-base
+
+  # Activity Bar
+  activityBar.background: *bg-lv-3
+  activityBar.inactiveForeground: *fg-dim-2 # aka: ./foreground
+  activityBar.border: *border-base
+  activityBar.activeBackground: *bg-lv-2
+  activityBar.foreground: *fg-highlight # aka: ./activeForeground
+  activityBar.activeBorder: *Accent
+  activityBarBadge.background: *Accent #fixme: darken
+  activityBarBadge.foreground: *bg-lv-3
+  activityBar.dropBorder: *Accent
+  activityBar.activeFocusBorder: # <= focusBorder
+
+  # Profiles
+  profileBadge.background: *bg-lv-1
+  profileBadge.foreground: *fg-base
+
+  # Editor Groups & Tabs
+  editorGroup.border: *Cyan
+  editorGroup.dropBackground: #todo
+  editorGroupHeader.noTabsBackground: # ?
+  editorGroupHeader.tabsBackground: *bg-lv-3
+  editorGroupHeader.tabsBorder: *border-base
+  editorGroupHeader.border: # none
+  tab.activeBackground: *bg-lv-2
+  tab.activeBorderTop: *AccentTint1
+  tab.inactiveBackground: *bg-lv-3
+  tab.border: *border-base
+  tab.activeForeground: *fg-highlight
+  tab.inactiveForeground: *fg-base
+  tab.unfocusedActiveForeground: *fg-dim-2
+  tab.unfocusedInactiveForeground: *fg-dim-2
+  # todo: etc.
+
+  # Breadcrumbs colors
+  breadcrumb.foreground: *fg-base
+  breadcrumb.background: # <= editor.background
+  breadcrumb.focusForeground: *fg-highlight
+  breadcrumb.activeSelectionForeground: *fg-selected
+  breadcrumbPicker.background: *bg-lv-1
+
+  # Scrollbar control
+  # something b/w lv-1 & lv-2 would be ideal... lv-1-border?
+  scrollbar.shadow: *bg-lv-1 # below breadcrumbs
+  scrollbarSlider.background: !alpha [*FG, 16]
+  scrollbarSlider.hoverBackground: !alpha [*FG, 32]
+  scrollbarSlider.activeBackground: !alpha [*FG, 48]
+
+  # Status Bar colors
+  statusBar.background: *bg-lv-3
+  statusBar.foreground: *fg-base
+  statusBar.border: *border-base
+  statusBarItem.activeBackground: *bg-lv-3-active
+  #fixme: make this an alpha (of fg-base?) because this doesn't play well with e.g. Debug mode, when bg becomes orange and this hardcoded hover appears out of place
+  statusBarItem.hoverBackground: *bg-lv-3-hover
+  # todo: Item + prominent, error, warning, etc.
+  statusBarItem.remoteBackground: *bg-lv-3
+  statusBarItem.remoteForeground: *fg-base
+  statusBar.debuggingBackground: !alpha [*Orange, a8]
+  statusBar.debuggingForeground: "#000"
+  statusBar.debuggingBorder: *transparent
+  statusBar.noFolderBackground: !alpha [*Pink, a0]
+  statusBar.noFolderForeground: "#000"
+  statusBar.noFolderBorder: *transparent
+  statusBar.focusBorder: *Accent
+
+  # Title Bar colors
+  titleBar.activeBackground: *bg-lv-3
+  titleBar.activeForeground: *fg-base
+  titleBar.inactiveBackground:
+  titleBar.inactiveForeground:
+  titleBar.border: *border-base
+
+  # Integrated Terminal colors
+  terminal.background: *bg-lv-1
+  terminal.foreground: *FG
+  terminal.ansiBlack: *bg-lv-1
+  terminal.ansiRed:           "#e94b35"
+  terminal.ansiGreen:         "#199c4b"
+  terminal.ansiYellow:        "#f0cc04"
+  terminal.ansiBlue:          "#5796ed"
+  terminal.ansiMagenta:       "#ca94ff"
+  terminal.ansiCyan:          "#8be0fd"
+  terminal.ansiWhite:         "#dfdfd9"
+  terminal.ansiBrightBlack:   "#2f3943"
+  terminal.ansiBrightRed:     "#ff6541"
+  terminal.ansiBrightGreen:   "#72cc5a"
+  terminal.ansiBrightYellow:  "#ffffa5"
+  terminal.ansiBrightBlue:    "#6b9fed"
+  terminal.ansiBrightMagenta: "#d4a9ff"
+  terminal.ansiBrightCyan:    "#b9ecfd"
+  terminal.ansiBrightWhite: *FG
+
+  # Editor - Bracket pair colorization
+  editorBracketHighlight.foreground1: *FG
+  editorBracketHighlight.foreground2: *Cyan
+  editorBracketHighlight.foreground3: *Yellow
+  editorBracketHighlight.foreground4: *Pink
+  editorBracketHighlight.foreground5: *Green
+  editorBracketHighlight.foreground6: *Orange
+  editorBracketHighlight.unexpectedBracket.foreground: *HintRed
+
+  # Text colors: for text documents like Markdown previews
+  textBlockQuote.background: !alpha [*BgTint1, c0]
+  textBlockQuote.border: !alpha [*Pink, 80]
+  textCodeBlock.background: # not respected?
+  textLink.activeForeground: *Cyan
+  textLink.foreground: *Cyan
+  textPreformat.foreground: *Orange
+  textSeparator.foreground: # not respected? / trying *Pink
+
+  # Editor - Errors and warnings
+  editorError.foreground: *HintRed # squiggles
+  editorError.border: # none, overlaps with squiggles
+  editorError.background: # none
+  editorWarning.foreground: *HintYellow
+  editorWarning.border: # none
+  editorWarning.background: # none
+  editorInfo.foreground: # Foreground color of info squiggles in the editor.
+  editorInfo.border: # none
+  editorInfo.background: # none
+  editorHint.foreground: # Foreground color of hints in the editor.
+  editorHint.border: # Border color of hint boxes in the editor.
+  problemsErrorIcon.foreground: # The color used for the problems error icon.
+  problemsWarningIcon.foreground: # The color used for the problems warning icon.
+  problemsInfoIcon.foreground: # The color used for the problems info icon.
+
+  # Panel colors
+  panel.background: *bg-lv-1
+  panel.border: *Cyan
+  panel.dropBorder: # Drag and drop feedback color for the panel titles.
+  panelTitle.activeBorder: # <= ./activeForeground
+  panelTitle.activeForeground: *fg-highlight
+  panelTitle.inactiveForeground: *fg-base
+  panelInput.border: # Input box border for inputs in the panel.
+  panelSection.border: # <= panel.border
+  panelSection.dropBackground: # Drag and drop feedback color for the panel sections.
+  panelSectionHeader.background: *bg-lv-1
+  panelSectionHeader.foreground: *fg-base
+  panelSectionHeader.border: *Cyan
+
+  # Editor - Find
+  editor.findMatchBackground: !alpha [*FG, 50]
+  editor.findMatchHighlightBackground: !alpha [*Selection, 80]
+  editor.findRangeHighlightBackground: !alpha [*FG, "08"]
+  editor.findMatchBorder: # none
+  editor.findMatchHighlightBorder: !alpha [*FG, 80]
+  editor.findRangeHighlightBorder: # none
+  searchEditor.findMatchBackground: !alpha [*Selection, a0]
+  searchEditor.findMatchBorder: # <= editor.findMatchHighlightBorder
+  searchEditor.textInputBorder: # Search editor text input box border.
+
+  # Editor - Overview ruler
+  #todo: etc
+  editorOverviewRuler.findMatchForeground: !alpha [*Selection, c0]
+
+  # Editor widget colors
+  editorWidget.foreground: *fg-base
+  editorWidget.background: *bg-lv-2
+  editorWidget.border: # Border color of the editor widget unless the widget does not contain a border or defines its own border color.
+  editorWidget.resizeBorder: # <= sash.hoverBorder
+  # Suggestion Widget =~ IntelliSense completion
+  editorSuggestWidget.background: # <= editorWidget.background
+  editorSuggestWidget.border: *border-base #nice: reconsider
+  editorSuggestWidget.foreground: *fg-base
+  editorSuggestWidget.focusHighlightForeground: *fg-highlight
+  editorSuggestWidget.highlightForeground: *fg-base
+  editorSuggestWidget.selectedBackground: # Background color of the selected entry. #todo: depends on ui:accent
+  editorSuggestWidget.selectedForeground: *fg-highlight
+  editorSuggestWidget.selectedIconForeground: # <= ./selectedForeground
+  editorSuggestWidgetStatus.foreground: *fg-dim-2
+  # Hover Widget =~ IntelliSense hover info
+  editorHoverWidget.foreground: *fg-highlight
+  editorHoverWidget.background: *bg-lv-1
+  editorHoverWidget.border: *Accent
+  editorHoverWidget.highlightForeground: # Foreground color of the active item in the parameter hint.
+  editorHoverWidget.statusBarBackground: # Background color of the editor hover status bar.
+  editorGhostText.border: # Border color of the ghost text shown by inline completion providers and the suggest preview.
+  editorGhostText.background: # Background color of the ghost text in the editor.
+  editorGhostText.foreground: # Foreground color of the ghost text shown by inline completion providers and the suggest preview.
+  debugExceptionWidget.background: # Exception widget background color.
+  debugExceptionWidget.border: # Exception widget border color.
+  editorMarkerNavigation.background: # Editor marker navigation widget background.
+  editorMarkerNavigationError.background: # Editor marker navigation widget error color.
+  editorMarkerNavigationWarning.background: # Editor marker navigation widget warning color.
+  editorMarkerNavigationInfo.background: # Editor marker navigation widget info color.
+  editorMarkerNavigationError.headerBackground: # Editor marker navigation widget error heading background.
+  editorMarkerNavigationWarning.headerBackground: # Editor marker navigation widget warning heading background.
+  editorMarkerNavigationInfo.headerBackground: # Editor marker navigation widget info heading background.
+
+  # Input control
+  input.background: *bg-lv-1
+  input.border: # none, transparent default is fine
+  input.foreground: *fg-highlight
+  input.placeholderForeground: *fg-dim-1
+  inputOption.activeBackground: # Background color of activated options in input fields.
+  inputOption.activeBorder: # Border color of activated options in input fields.
+  inputOption.activeForeground: # Foreground color of activated options in input fields.
+  inputOption.hoverBackground: # !alpha [*FG, 18]
+  inputValidation.errorBackground: # Input validation background color for error severity.
+  inputValidation.errorForeground: # Input validation foreground color for error severity.
+  inputValidation.errorBorder: # Input validation border color for error severity.
+  inputValidation.infoBackground: # Input validation background color for information severity.
+  inputValidation.infoForeground: # Input validation foreground color for information severity.
+  inputValidation.infoBorder: # Input validation border color for information severity.
+  inputValidation.warningBackground: # Input validation background color for information warning.
+  inputValidation.warningForeground: # Input validation foreground color for warning severity.
+  inputValidation.warningBorder: # Input validation border color for warning severity.
+
+  # Git colors #todo
+  gitDecoration.ignoredResourceForeground: *fg-dim-2
+
+  # Dropdown control
+  dropdown.background: *bg-lv-2
+  dropdown.listBackground: *bg-lv-2
+  dropdown.border: *border-base
+  dropdown.foreground: *fg-base
+
+  # Menu Bar colors
+  menubar.selectionForeground: # Foreground color of the selected menu item in the menubar.
+  #todo: make this like statusBar.hoverBackground
+  menubar.selectionBackground: # Background color of the selected menu item in the menubar.
+  menubar.selectionBorder: # Border color of the selected menu item in the menubar.
+  menu.foreground: # <= dropdown.foreground
+  menu.background: # <= dropdown.background
+  menu.selectionForeground: # Foreground color of the selected menu item in menus.
+  #nice: I don't dislike the default, but maybe we should do bg-lv-2-active
+  menu.selectionBackground: # Background color of the selected menu item in menus.
+  menu.selectionBorder: # Border color of the selected menu item in menus.
+  menu.separatorBackground: *fg-separator
+  menu.border: # none
+
+# ---------------------------------------------------------------------------- #
+
+tokenColors:
+  # syntax colors
+
+  - name: Comment
+    scope: comment
+    settings:
+      foreground: *Accent
+
+  - name: String
+    scope: string
+    settings:
+      foreground: *Yellow
+
+  - name: Number
+    scope: constant.numeric
+    settings:
+      foreground: *Pink
+
+  - name: Built-in constant
+    scope: constant.language
+    settings:
+      foreground: *Pink
+
+  - name: User-defined constant
+    scope:
+      - constant.character
+      - constant.other
+    settings:
+      foreground: *Pink
+
+  - name: Constant catch-all
+    scope:
+      - constant
+    settings:
+      foreground: *Pink
+
+  - name: Instance variable
+    scope: variable.other.readwrite.instance
+    settings:
+      foreground: *Orange
+
+  - name: Escaped string (?)
+    scope:
+      - constant.character.escaped
+      - constant.character.escape
+      - string.source
+      - string.source.ruby
+    settings:
+      foreground: *Pink
+
+  - name: Keyword
+    scope: keyword
+    settings:
+      foreground: *Red
+
+  - name: Storage
+    scope: storage
+    settings:
+      fontStyle: ""
+      foreground: *Red
+
+  - name: Storage type
+    scope: storage.type
+    settings:
+      foreground: *Cyan
+
+  - name: Class name
+    scope: entity.name.class
+    settings:
+      fontStyle: underline
+      foreground: *Green
+
+  - name: Inherited class
+    scope: entity.other.inherited-class
+    settings:
+      fontStyle: underline
+      foreground: *Green
+
+  - name: Function name
+    scope: entity.name.function
+    settings:
+      fontStyle: ""
+      foreground: *Green
+
+  - name: Function argument
+    scope: variable.parameter
+    settings:
+      fontStyle: italic
+      foreground: *Orange
+
+  - name: Tag name
+    scope: entity.name.tag
+    settings:
+      foreground: *Red
+
+  #todo: consider enabling on html
+  - name: XML - Tag angle brackets
+    scope: punctuation.definition.tag.xml
+    settings:
+      foreground: !alpha [*FG, 80]
+
+  - name: Tag attribute
+    scope:
+      - entity.other.attribute-name
+      - markup.heading
+    settings:
+      fontStyle: ""
+      foreground: *Green
+
+  - name: Library function
+    scope: support.function
+    settings:
+      fontStyle: ""
+      foreground: *Cyan
+
+  - name: Library constant
+    scope: support.constant
+    settings:
+      fontStyle: ""
+      foreground: *Cyan
+
+  - name: Library class/type
+    scope:
+      - support.type
+      - support.class
+    settings:
+      foreground: *Cyan
+
+  - name: Library variable
+    scope:
+      - support.other.variable
+      - variable.unordered
+      - variable.ordered
+    settings:
+      fontStyle: ""
+      foreground: *Orange
+
+  - name: Invalid
+    scope:
+      - invalid
+      # - invalid.deprecated
+    settings:
+      fontStyle: ""
+      foreground: *Invalid
+      # not supported in vscode:
+      # background: *Selection
+
+  - name: Invalid deprecated
+    scope: invalid.deprecated
+    settings:
+      foreground: *Invalid
+      # not supported in vscode:
+      # background: *Selection
+
+  - name: diff.header
+    scope:
+      - meta.diff
+      - meta.diff.header
+    settings:
+      foreground: *DiffHeader
+
+  - name: diff.deleted
+    scope: markup.deleted
+    settings:
+      foreground: *HintRed
+
+  - name: diff.inserted
+    scope: markup.inserted
+    settings:
+      foreground: *HintGreen
+
+  - name: diff.changed
+    scope: markup.changed
+    settings:
+      foreground: *HintYellow
+
+  - name: Markup emphasis
+    scope:
+      - markup.bold
+      - markup.italic
+    settings:
+      foreground: *Red
+
+  - name: Markup raw
+    scope: markup.raw
+    settings:
+      foreground: *Cyan
+
+  - name: Markdown - Heading
+    scope: markup.heading.markdown
+    settings:
+      fontStyle: bold
+
+  - name: Markdown - Bold
+    scope: markup.bold.markdown
+    settings:
+      fontStyle: bold
+
+  - name: Markdown - Italics
+    scope: markup.italic.markdown
+    settings:
+      fontStyle: italic
+
+  - name: Markdown - Raw Inline
+    scope:
+      - punctuation.definition.raw.markdown # backticks
+      - markup.inline.raw.string.markdown
+    settings:
+      foreground: *Orange
+      # json linter says: token background colors are currently not supported
+      # background: *bg-lv-1/2
+
+  - name: Markdown - Block-level punctuation
+    scope:
+      - markup.fenced_code.block.markdown punctuation.definition.markdown # code fences ```
+      - punctuation.definition.quote.begin.markdown # blockquote >
+      - meta.separator.markdown # ---
+    settings:
+      foreground: *Pink
+
+  - name: Markdown - Code fences language
+    scope: text.html.markdown fenced_code.block.language
+    settings:
+      foreground: *Pink
+
+  - name: Markdown - Blockquote plain text
+    scope: markup.quote.markdown meta.paragraph.markdown
+    settings:
+      foreground: !alpha [*FG, c0]
+
+  - name: Markdown - Strikethrough punctuation # i.e: "~~"
+    scope: punctuation.definition.strikethrough.markdown
+    settings:
+      foreground: *Red
+
+  - name: Markdown - Strikethrough plain text
+    scope: markup.strikethrough.markdown
+    settings:
+      foreground: !alpha [*FG, 80]
+
+  - name: Markdown - Link title
+    scope:
+      - text.html.markdown string.other.link # for [link](url) and ![image](url)
+      - text.html.markdown punctuation.definition.link # [] and ![]
+    settings:
+      foreground: *Yellow
+
+  - name: Markdown - Link url
+    scope:
+      - text.html.markdown markup.underline.link
+      - punctuation.definition.metadata.markdown # the parens in []()
+    settings:
+      foreground: !alpha [*Cyan, 90]
+
+  - name: Markdown - Raw url # like "<url>"
+    scope:
+      - meta.link.inet.markdown markup.underline.link.markdown
+      - meta.link.inet.markdown punctuation.definition.link.markdown # the angle quotes
+    settings:
+      foreground: *Cyan
+
+  - name: Markdown - List item marker
+    # i.e.: "- ", "* ", "1. "
+    scope: text.html.markdown punctuation.definition.list.begin
+    settings:
+      foreground: *Pink
+
+  - name: Markdown - HTML special characters
+    # e.g.: &nbsp; or &amp;
+    scope: text.html.markdown constant.character.entity.named
+    settings:
+      foreground: *Pink
+
+  #nice: improve md syntax to pick up emoji, like ":emoji-code:"
+  #      or perhaps I can target that with semantic scopes?
+
+  - scope:
+      - punctuation.definition.tag.xml.plist
+      - constant.name.xml
+    settings:
+      foreground: *FG
+
+  - name: YAML - Key
+    scope: entity.name.tag.yaml
+    settings:
+      foreground: *Cyan
+
+  - name: YAML - Anchor
+    scope:
+      - entity.name.type.anchor.yaml
+      - punctuation.definition.anchor.yaml
+    settings:
+      foreground: *FG
+
+  - name: YAML - Alias
+    scope:
+      - variable.other.alias.yaml
+      - punctuation.definition.alias.yaml
+    settings:
+      foreground: *Orange
+
+  - name: YAML - String quotes
+    scope: source.yaml punctuation.definition.string
+    settings:
+      foreground: *FG
+
+  - name: YAML - Tag
+    scope: storage.type.tag-handle.yaml
+    settings:
+      foreground: *Red
+
+  - name: YAML - Directive
+    scope:
+      - punctuation.definition.directive.begin.yaml
+      - meta.directive.yaml keyword.other.directive
+      - meta.directive.yaml constant.numeric
+      - meta.directive.yaml storage.type
+      - meta.directive.yaml support.type
+    settings:
+      foreground: *Green
+
+  - name: YAML - Block scalar flow control
+    scope:
+      - source.yaml keyword.control.flow.block-scalar
+      - storage.modifier.chomping-indicator.yaml
+    settings:
+      foreground: *FG
+
+  - name: Ruby - Block parameters
+    scope:
+      - variable.other.block.ruby
+    settings:
+      foreground: *Orange
