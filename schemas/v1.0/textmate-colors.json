@@ -5,7 +5,7 @@
             "default": "#FF0000",
             "anyOf": [
                 {
-                    "$ref": "yaml-color-property.yml"
+                    "$ref": "yaml-color-theme-defs.yml"
                 },
                 {
                     "$ref": "#/$defs/_0"
@@ -17,7 +17,7 @@
             "description": "Colors and styles for the token.",
             "properties": {
                 "foreground": {
-                    "$ref": "yaml-color-property.yml",
+                    "$ref": "yaml-color-theme-defs.yml",
                     "description": "Foreground color for the token.",
                     "default": "#ff0000"
                 },

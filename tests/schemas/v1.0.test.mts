@@ -21,7 +21,7 @@ const alphaTag: CollectionTag = {
 const schemaOptions: SchemaOptions = { customTags: [alphaTag] };
 
 test("actual schema validates ok", async() => {
-  const schemaFilenames = ['color-theme.json', 'workbench-colors.json', 'textmate-colors.json', 'token-styling.json', 'yaml-color-property.yml'];
+  const schemaFilenames = ['color-theme.json', 'workbench-colors.json', 'textmate-colors.json', 'token-styling.json', 'yaml-color-theme-defs.yml'];
   const schemasPathRoot = path.join(__dirname, '..', '..', 'schemas', 'v1.0');
   const schemasUriRoot = "http://example.com/schemas/";
   const schemaTuples = await Promise.all(schemaFilenames.map(async (filename) => {
@@ -64,9 +64,8 @@ test("actual schema validates ok", async() => {
   expect(validationResult).toBe(true);
 });
 
-test("the owned sub-schema doesn't error when compiling with AJV strict mode", async() => {
-  //todo: rename to definitions after merging tests
-  const schemaFilename = 'yaml-color-property.yml'; // change to definitions
+test("the defs sub-schema (owned) doesn't error when compiling with AJV strict mode", async() => {
+  const schemaFilename = 'yaml-color-theme-defs.yml';
   const schemasPathRoot = path.join(__dirname, '..', '..', 'schemas', 'v1.0');
   const schemaPath = path.join(schemasPathRoot, schemaFilename);
   const schemaRaw = await readFile(schemaPath, 'utf8');

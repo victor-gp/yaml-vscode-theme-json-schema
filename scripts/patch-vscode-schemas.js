@@ -1,9 +1,10 @@
+//todo transform to ESM and make the package type=module
 const fsp = require('fs/promises');
 const path = require('path');
 
 //nice: configure all of this in config.json
 const SCHEMAS = [
-    'color-theme.json',
+    'color-theme.json', //nice TBD rename this root schema to `yaml-color-theme.json` ?
     'textmate-colors.json',
     'token-styling.json',
     'workbench-colors.json',
@@ -73,7 +74,7 @@ function replaceColorHexTypes(schema, parents = []) {
         delete schema['type'];
         delete schema['format'];
         schema = {
-            '$ref': 'yaml-color-property.yml',
+            '$ref': 'yaml-color-theme-defs.yml',
             ...schema
         };
     }
