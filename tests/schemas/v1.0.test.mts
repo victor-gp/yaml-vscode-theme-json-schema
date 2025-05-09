@@ -42,7 +42,7 @@ test("actual schema validates ok", async() => {
   const ajvOptions = {
     // silence "property comment matches pattern xyz" compilation error
     allowMatchingProperties: true,
-    // silence 'missing "string" for keyword "pattern"' errors in vscode-owned schemas
+    // silence 'missing "string" for keyword "pattern"' logs in vscode-owned schemas
     strictTypes: false,
     schemas,
     // verbose: true,
@@ -64,5 +64,24 @@ test("actual schema validates ok", async() => {
   expect(validationResult).toBe(true);
 });
 
-//todo: test compiling our owned schema with 'strictTypes: true'
+test("the owned sub-schema doesn't error when compiling with AJV strict mode", async() => {
+  //todo: rename to definitions after merging tests
+  const schemaFilename = 'yaml-color-property.yml'; // change to definitions
+  const schemasPathRoot = path.join(__dirname, '..', '..', 'schemas', 'v1.0');
+  const schemaPath = path.join(schemasPathRoot, schemaFilename);
+  const schemaRaw = await readFile(schemaPath, 'utf8');
+  const schemaAST = parseYaml(schemaRaw);
+
+  const ajvOptions = {
+    strict: true,
+    // verbose: true,
+  };
+  const ajv = new Ajv(ajvOptions);
+  const hexDigit = "[0-9a-fA-F]";
+  const colorHexRegex = new RegExp(`^#(${hexDigit}{3}|${hexDigit}{4}|${hexDigit}{6}|${hexDigit}{8})$`);
+  ajv.addFormat("color-hex", colorHexRegex);
+
+  expect(() => ajv.compile(schemaAST)).not.toThrow();
+})
+
 //todo: test schemas with additional properties (should fail validation)
