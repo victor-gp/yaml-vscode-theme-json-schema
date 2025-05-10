@@ -74,7 +74,8 @@ function replaceColorHexTypes(schema, parents = []) {
         delete schema['type'];
         delete schema['format'];
         schema = {
-            '$ref': 'yaml-color-theme-defs.yml',
+            //todo: better transform this to plain json here, don't tempt luck
+            '$ref': 'yaml-color-theme-defs.yml#/properties/nullableColor',
             ...schema
         };
     }

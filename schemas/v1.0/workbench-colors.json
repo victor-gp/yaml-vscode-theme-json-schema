@@ -126,7 +126,7 @@
             "description": "Color for text separators.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#21262d}"
@@ -142,7 +142,7 @@
             "description": "Foreground color for preformatted text segments.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#d0d0d0}"
@@ -334,7 +334,7 @@
             "description": "Line color for the chart.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#236b8e}"
@@ -581,7 +581,7 @@
             "description": "Foreground color of hint squigglies in the editor.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#eeeeeeb3}"
@@ -641,7 +641,7 @@
             "description": "Color of the selection in an inactive editor. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#3a3d41}"
@@ -659,7 +659,7 @@
             "description": "Color for regions with the same content as the selection. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#add6ff26}"
@@ -699,7 +699,7 @@
             "description": "Color of the current search match.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9e6a03}"
@@ -748,7 +748,7 @@
             "description": "Color of the range limiting the search. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#3a3d4166}"
@@ -799,7 +799,7 @@
             "description": "Highlight below the word for which a hover is shown. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#264f7840}"
@@ -960,7 +960,7 @@
             "description": "Highlight background color of a snippet tabstop.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#7c7c7c4d}"
@@ -998,7 +998,7 @@
             "description": "Highlight border color of the final tabstop of a snippet.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#525252}"
@@ -1014,7 +1014,7 @@
             "description": "Background color for text that got inserted. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9ccc2c33}"
@@ -1043,7 +1043,7 @@
             "description": "Background color for lines that got inserted. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9bb95533}"
@@ -1182,7 +1182,7 @@
             "description": "The background color of unchanged code in the diff editor.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#74747429}"
@@ -1242,7 +1242,7 @@
             "description": "Toolbar background when holding the mouse over actions",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#63666750}"
@@ -1258,7 +1258,7 @@
             "description": "Color of focused breadcrumb items.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#cccccccc}"
@@ -1318,7 +1318,7 @@
             "description": "Current header background in inline merge-conflicts. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#40c8ae80}"
@@ -1336,7 +1336,7 @@
             "description": "Current content background in inline merge-conflicts. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#40c8ae33}"
@@ -1354,7 +1354,7 @@
             "description": "Incoming header background in inline merge-conflicts. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#40a6ff80}"
@@ -1372,7 +1372,7 @@
             "description": "Incoming content background in inline merge-conflicts. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#40a6ff33}"
@@ -1390,7 +1390,7 @@
             "description": "Common ancestor header background in inline merge-conflicts. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#60606066}"
@@ -1408,7 +1408,7 @@
             "description": "Common ancestor content background in inline merge-conflicts. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#60606029}"
@@ -1437,7 +1437,7 @@
             "description": "Current overview ruler foreground for inline merge-conflicts.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#40c8ae80}"
@@ -1453,7 +1453,7 @@
             "description": "Incoming overview ruler foreground for inline merge-conflicts.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#40a6ff80}"
@@ -1469,7 +1469,7 @@
             "description": "Common ancestor overview ruler foreground for inline merge-conflicts.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#60606066}"
@@ -1485,7 +1485,7 @@
             "description": "Overview ruler marker color for find matches. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#d186167e}"
@@ -1547,7 +1547,7 @@
             "description": "Minimap marker color for find matches.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#d18616}"
@@ -1565,7 +1565,7 @@
             "description": "Minimap marker color for repeating editor selections.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#676767}"
@@ -1583,7 +1583,7 @@
             "description": "Minimap marker color for the editor selection.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#264f78}"
@@ -1656,7 +1656,7 @@
             "description": "Minimap slider background color.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#79797933}"
@@ -1672,7 +1672,7 @@
             "description": "Minimap slider background color when hovering.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#64646459}"
@@ -1754,7 +1754,7 @@
             "description": "The orange color used in chart visualizations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#d18616}"
@@ -1880,7 +1880,7 @@
             "description": "Input validation background color for information severity.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#063b49}"
@@ -1918,7 +1918,7 @@
             "description": "Input validation background color for warning severity.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#352a05}"
@@ -1956,7 +1956,7 @@
             "description": "Input validation background color for error severity.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#5a1d1d}"
@@ -2082,7 +2082,7 @@
             "description": "Button border color.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffff12}"
@@ -2263,7 +2263,7 @@
             "description": "Keybinding label background color. The keybinding label is used to represent a keyboard shortcut.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#8080802b}"
@@ -2290,7 +2290,7 @@
             "description": "Keybinding label border color. The keybinding label is used to represent a keyboard shortcut.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#33333399}"
@@ -2306,7 +2306,7 @@
             "description": "Keybinding label border bottom color. The keybinding label is used to represent a keyboard shortcut.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#44444499}"
@@ -2476,7 +2476,7 @@
             "description": "List/Tree drag and drop background when moving items over other items when using the mouse.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#383b3d}"
@@ -2536,7 +2536,7 @@
             "description": "Foreground color of list items containing errors.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#f88070}"
@@ -2607,7 +2607,7 @@
             "description": "Background color of the filtered match.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ea5c0055}"
@@ -2645,7 +2645,7 @@
             "description": "Tree stroke color for the indentation guides.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#585858}"
@@ -2661,7 +2661,7 @@
             "description": "Tree stroke color for the indentation guides that are not active.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#58585866}"
@@ -2677,7 +2677,7 @@
             "description": "Table border color between columns.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#cccccc20}"
@@ -2847,7 +2847,7 @@
             "description": "Quick picker title background color. The quick picker widget is the container for pickers like the command palette.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffff1b}"
@@ -2885,7 +2885,7 @@
             "description": "",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ff0000}"
@@ -2935,7 +2935,7 @@
             "description": "Color of the text in the search viewlet's completion message.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#cccccca6}"
@@ -2951,7 +2951,7 @@
             "description": "Color of the Search Editor query matches.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ea5c0038}"
@@ -2989,7 +2989,7 @@
             "description": "Background color for the border around the line at the cursor position.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#282828}"
@@ -3005,7 +3005,7 @@
             "description": "Background color of highlighted ranges, like by quick open and find features. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffff0b}"
@@ -3122,7 +3122,7 @@
             "description": "Color of whitespace characters in the editor.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#e3e4e229}"
@@ -3138,7 +3138,7 @@
             "description": "Color of editor line numbers.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#6e7681}"
@@ -3154,7 +3154,7 @@
             "description": "Color of the editor indentation guides.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#e3e4e229}"
@@ -3171,7 +3171,7 @@
             "description": "Color of the active editor indentation guides.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#e3e4e229}"
@@ -3188,7 +3188,7 @@
             "description": "Color of the editor indentation guides (1).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#404040}"
@@ -3259,7 +3259,7 @@
             "description": "Color of the active editor indentation guides (1).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#707070}"
@@ -3330,7 +3330,7 @@
             "description": "Color of editor active line number",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#c6c6c6}"
@@ -3369,7 +3369,7 @@
             "description": "Color of the editor rulers.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#5a5a5a}"
@@ -3385,7 +3385,7 @@
             "description": "Foreground color of editor CodeLens",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#999999}"
@@ -3401,7 +3401,7 @@
             "description": "Background color behind matching brackets",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#0064001a}"
@@ -3417,7 +3417,7 @@
             "description": "Color for matching brackets boxes",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#888888}"
@@ -3477,7 +3477,7 @@
             "description": "Opacity of unnecessary (unused) source code in the editor. For example, \"#000000c0\" will render the code with 75% opacity. For high contrast themes, use the  'editorUnnecessaryCode.border' theme color to underline unnecessary code instead of fading it out.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#000000aa}"
@@ -3526,7 +3526,7 @@
             "description": "Overview ruler marker color for range highlights. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#007acc99}"
@@ -3577,7 +3577,7 @@
             "description": "Foreground color of brackets (1). Requires enabling bracket pair colorization.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffd700}"
@@ -3593,7 +3593,7 @@
             "description": "Foreground color of brackets (2). Requires enabling bracket pair colorization.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#da70d6}"
@@ -3609,7 +3609,7 @@
             "description": "Foreground color of brackets (3). Requires enabling bracket pair colorization.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#179fff}"
@@ -3658,7 +3658,7 @@
             "description": "Foreground color of unexpected brackets.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ff1212cc}"
@@ -3828,7 +3828,7 @@
             "description": "The border color for text that got moved in the diff editor.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#8b8b8b9c}"
@@ -3844,7 +3844,7 @@
             "description": "The active border color for text that got moved in the diff editor.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffa500}"
@@ -3871,7 +3871,7 @@
             "description": "Overview ruler marker color for matching brackets.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#a0a0a0}"
@@ -3887,7 +3887,7 @@
             "description": "Background color for toggled action items in action bar.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#383a49}"
@@ -4288,7 +4288,7 @@
             "description": "Color of the peek view title info.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ccccccb3}"
@@ -4326,7 +4326,7 @@
             "description": "Foreground color for line nodes in the peek view result list.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#bbbbbb}"
@@ -4353,7 +4353,7 @@
             "description": "Background color of the selected entry in the peek view result list.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#3399ff33}"
@@ -4446,7 +4446,7 @@
             "description": "Background color behind folded ranges. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#264f784d}"
@@ -4464,7 +4464,7 @@
             "description": "Color of the collapsed text after the first line of a folded range.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#808080}"
@@ -4590,7 +4590,7 @@
             "description": "Background color for the original text in inline edits.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ff00000a}"
@@ -4608,7 +4608,7 @@
             "description": "Background color for the modified text in inline edits.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9ccc2c0f}"
@@ -4648,7 +4648,7 @@
             "description": "Background color for the changed lines in the modified text of inline edits.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9bb95524}"
@@ -4666,7 +4666,7 @@
             "description": "Overlay color for the changed text in the modified text of inline edits.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9ccc2c24}"
@@ -4706,7 +4706,7 @@
             "description": "Background color for the primary inline edit gutter indicator.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#0078d466}"
@@ -4788,7 +4788,7 @@
             "description": "Background color for the inline edit gutter indicator.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#18181880}"
@@ -4881,7 +4881,7 @@
             "description": "Editor marker navigation widget warning heading background.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#cca7001a}"
@@ -4952,7 +4952,7 @@
             "description": "Background color of a symbol during write-access, like writing to a variable. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#004972b8}"
@@ -5014,7 +5014,7 @@
             "description": "Overview ruler marker color for symbol highlights. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#a0a0a0cc}"
@@ -5032,7 +5032,7 @@
             "description": "Overview ruler marker color for write-access symbol highlights. The color must not be opaque so as not to hide underlying decorations.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#c0a0c0cc}"
@@ -5160,7 +5160,7 @@
             "description": "Inactive tab foreground color in an unfocused group. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9d9d9d80}"
@@ -5286,7 +5286,7 @@
             "description": "Border to the top of a selected tab. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#6caddf}"
@@ -5313,7 +5313,7 @@
             "description": "Foreground of a selected tab. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffffa0}"
@@ -5362,7 +5362,7 @@
             "description": "Border on the top of modified active tabs in an active group. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#3399cc}"
@@ -5400,7 +5400,7 @@
             "description": "Border on the top of modified inactive tabs in an unfocused group. Tabs are the containers for editors in the editor area. Multiple tabs can be opened in one editor group. There can be multiple editor groups.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#3399cc40}"
@@ -5702,7 +5702,7 @@
             "description": "Status bar item background color when clicking. The status bar is shown in the bottom of the window.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffff2e}"
@@ -5773,7 +5773,7 @@
             "description": "Status bar prominent items background color. Prominent items stand out from other status bar entries to indicate importance. The status bar is shown in the bottom of the window.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#6e768166}"
@@ -5811,7 +5811,7 @@
             "description": "Status bar error items background color. Error items stand out from other status bar entries to indicate error conditions. The status bar is shown in the bottom of the window.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#b91007}"
@@ -5860,7 +5860,7 @@
             "description": "Status bar warning items background color. Warning items stand out from other status bar entries to indicate warning conditions. The status bar is shown in the bottom of the window.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#7a6400}"
@@ -5931,7 +5931,7 @@
             "description": "Activity bar item foreground color when it is inactive. The activity bar is showing on the far left or right and allows to switch between views of the side bar.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#868686}"
@@ -6057,7 +6057,7 @@
             "description": "Inactive foreground color of the item in the Activity bar when it is on top / bottom. The activity allows to switch between views of the side bar.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#e7e7e799}"
@@ -6216,7 +6216,7 @@
             "description": "Panel section header background color. Panels are shown below the editor area and contain views like output and integrated terminal. Panel sections are views nested within the panels.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#80808033}"
@@ -6298,7 +6298,7 @@
             "description": "Profile badge background color. The profile badge shows on top of the settings gear icon in the activity bar.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#4d4d4d}"
@@ -6369,7 +6369,7 @@
             "description": "Status bar item background color when the workbench is offline.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#6c1717}"
@@ -6715,7 +6715,7 @@
             "description": "Background color of the command center",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffff0d}"
@@ -6731,7 +6731,7 @@
             "description": "Active background color of the command center",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffff14}"
@@ -6758,7 +6758,7 @@
             "description": "Active border color of the command center",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#cccccc4d}"
@@ -6774,7 +6774,7 @@
             "description": "Border color of the command center when the window is inactive",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9d9d9d40}"
@@ -7054,7 +7054,7 @@
             "description": "Background color of inserted text in the interactive editor input",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9ccc2c1a}"
@@ -7092,7 +7092,7 @@
             "description": "Background color of removed text in the interactive editor input",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ff00001a}"
@@ -7108,7 +7108,7 @@
             "description": "Overview ruler marker color for inline chat removed content.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ff00001f}"
@@ -7234,7 +7234,7 @@
             "description": "The background color of a chat request.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#1f1f1f9e}"
@@ -7250,7 +7250,7 @@
             "description": "The background color of a chat slash command.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#34414b}"
@@ -7266,7 +7266,7 @@
             "description": "The foreground color of a chat slash command.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#40a6ff}"
@@ -7480,7 +7480,7 @@
             "description": "The color of the separator in the cell bottom toolbar",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#80808059}"
@@ -7573,7 +7573,7 @@
             "description": "The background color of notebook cell status bar items.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffff26}"
@@ -7633,7 +7633,7 @@
             "description": "Background color of highlighted cell",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffff0b}"
@@ -7737,7 +7737,7 @@
             "description": "Overview ruler marker color for modified content.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#0078d499}"
@@ -7753,7 +7753,7 @@
             "description": "Overview ruler marker color for added content.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#2ea04399}"
@@ -7769,7 +7769,7 @@
             "description": "Overview ruler marker color for deleted content.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#f8514999}"
@@ -7862,7 +7862,7 @@
             "description": "The selection background color of the terminal when it does not have focus.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#3a3d41}"
@@ -7889,7 +7889,7 @@
             "description": "The default terminal command decoration background color.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffff40}"
@@ -7905,7 +7905,7 @@
             "description": "The terminal command decoration background color for successful commands.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#1b81a8}"
@@ -7932,7 +7932,7 @@
             "description": "The overview ruler cursor color.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#a0a0a0cc}"
@@ -7970,7 +7970,7 @@
             "description": "Color of the current search match in the terminal. The color must not be opaque so as not to hide underlying terminal content.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9e6a03}"
@@ -7988,7 +7988,7 @@
             "description": "Border color of the other search matches in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#264f7820}"
@@ -8037,7 +8037,7 @@
             "description": "Overview ruler marker color for find matches in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#d186167e}"
@@ -8053,7 +8053,7 @@
             "description": "Background color when dragging on top of terminals. The color should have transparency so that the terminal contents can still shine through.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#53595d80}"
@@ -8115,7 +8115,7 @@
             "description": "History item base reference color.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ea5c00}"
@@ -8186,7 +8186,7 @@
             "description": "Source control graph foreground color (1).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffb000}"
@@ -8202,7 +8202,7 @@
             "description": "Source control graph foreground color (2).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#dc267f}"
@@ -8218,7 +8218,7 @@
             "description": "Source control graph foreground color (3).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#994f00}"
@@ -8234,7 +8234,7 @@
             "description": "Source control graph foreground color (4).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#40b0a6}"
@@ -8250,7 +8250,7 @@
             "description": "Source control graph foreground color (5).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#b66dff}"
@@ -8321,7 +8321,7 @@
             "description": "The color of the icon for a port that has an associated running process.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#369432}"
@@ -8348,7 +8348,7 @@
             "description": "The foreground color for a section header or hovered title.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffffb3}"
@@ -8540,7 +8540,7 @@
             "description": "The background color of a settings row when focused.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#2a2d2e99}"
@@ -8556,7 +8556,7 @@
             "description": "The background color of a settings row when hovered.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#2a2d2e4d}"
@@ -8605,7 +8605,7 @@
             "description": "Exception widget border color.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#a31515}"
@@ -8621,7 +8621,7 @@
             "description": "Exception widget background color.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#420b0d}"
@@ -8648,7 +8648,7 @@
             "description": "Color for the debug inline value background.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffc80033}"
@@ -8664,7 +8664,7 @@
             "description": "Icon color for breakpoints.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#e51400}"
@@ -8724,7 +8724,7 @@
             "description": "Background color for the highlight of line at the top stack frame position.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffff0033}"
@@ -8740,7 +8740,7 @@
             "description": "Background color for the highlight of line at focused stack frame position.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#7abd7a4d}"
@@ -8789,7 +8789,7 @@
             "description": "Color of pending edit regions in the minimap",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#1f1f1f99}"
@@ -8816,7 +8816,7 @@
             "description": "Gauge foreground color.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#007acc4d}"
@@ -8854,7 +8854,7 @@
             "description": "Gauge warning foreground color.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#b895004d}"
@@ -8881,7 +8881,7 @@
             "description": "Gauge error foreground color.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#be11004d}"
@@ -9051,7 +9051,7 @@
             "description": "Border color of text that was covered.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9ccc2c26}"
@@ -9078,7 +9078,7 @@
             "description": "Background of the widget shown for an uncovered branch.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#781212}"
@@ -9105,7 +9105,7 @@
             "description": "Border color of text that was not covered.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ff000026}"
@@ -9242,7 +9242,7 @@
             "description": "Retired color for the 'passed' icon in the test explorer.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#73c991b3}"
@@ -9258,7 +9258,7 @@
             "description": "Retired color for the 'Queued' icon in the test explorer.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#cca700b3}"
@@ -9340,7 +9340,7 @@
             "description": "Command center background color when a program is being debugged",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#0078d442}"
@@ -9358,7 +9358,7 @@
             "description": "Foreground color for the token names shown in the debug views (ie. the Variables or Watch view).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#c586c0}"
@@ -9374,7 +9374,7 @@
             "description": "Foreground color for the token types shown in the debug views (ie. the Variables or Watch view).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#4a90e2}"
@@ -9401,7 +9401,7 @@
             "description": "Foreground color for strings in the debug views (ie. the Variables or Watch view).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ce9178}"
@@ -9428,7 +9428,7 @@
             "description": "Foreground color for numbers in the debug views (ie. the Variables or Watch view).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#b5cea8}"
@@ -9466,7 +9466,7 @@
             "description": "Background color for a label shown in the CALL STACK view when the debugger breaks on an exception.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#6c2022}"
@@ -9493,7 +9493,7 @@
             "description": "Background color for a label in the CALL STACK view showing the current session's or thread's state.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#88888844}"
@@ -9509,7 +9509,7 @@
             "description": "Color used to highlight value changes in the debug views (ie. in the Variables view).",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#569cd6}"
@@ -9663,7 +9663,7 @@
             "description": "The background color for changes.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#9bb95533}"
@@ -9690,7 +9690,7 @@
             "description": "The background color for changes in base.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#4b1818}"
@@ -9706,7 +9706,7 @@
             "description": "The background color for word changes in base.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#6f1313}"
@@ -9722,7 +9722,7 @@
             "description": "The border color of unhandled unfocused conflicts.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffa6007a}"
@@ -9738,7 +9738,7 @@
             "description": "The border color of unhandled focused conflicts.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffa600}"
@@ -9754,7 +9754,7 @@
             "description": "The border color of handled unfocused conflicts.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#86868649}"
@@ -9770,7 +9770,7 @@
             "description": "The border color of handled focused conflicts.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#c1c1c1cc}"
@@ -9786,7 +9786,7 @@
             "description": "The foreground color for changes in input 1.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#adaca8ee}"
@@ -9802,7 +9802,7 @@
             "description": "The foreground color for changes in input 1.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#fcba03}"
@@ -9818,7 +9818,7 @@
             "description": "The background of the \"Conflicting Lines\" text.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffea0047}"
@@ -9834,7 +9834,7 @@
             "description": "The background color of decorations in input 1.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#40c8ae33}"
@@ -9850,7 +9850,7 @@
             "description": "The background color of decorations in input 2.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#40a6ff33}"
@@ -9866,7 +9866,7 @@
             "description": "The icon color for extension ratings.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ff8e00}"
@@ -9882,7 +9882,7 @@
             "description": "The icon color for pre-release extension.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#1d9271}"
@@ -9898,7 +9898,7 @@
             "description": "The icon color for extension sponsor.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#d758b3}"
@@ -9914,7 +9914,7 @@
             "description": "The icon color for private extensions.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#ffffff60}"
@@ -9941,7 +9941,7 @@
             "description": "'Red' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#cd3131}"
@@ -9957,7 +9957,7 @@
             "description": "'Green' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#0dbc79}"
@@ -9973,7 +9973,7 @@
             "description": "'Yellow' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#e5e510}"
@@ -9989,7 +9989,7 @@
             "description": "'Blue' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#2472c8}"
@@ -10005,7 +10005,7 @@
             "description": "'Magenta' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#bc3fbc}"
@@ -10021,7 +10021,7 @@
             "description": "'Cyan' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#11a8cd}"
@@ -10048,7 +10048,7 @@
             "description": "'BrightBlack' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#666666}"
@@ -10075,7 +10075,7 @@
             "description": "'BrightGreen' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#23d18b}"
@@ -10091,7 +10091,7 @@
             "description": "'BrightYellow' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#f5f543}"
@@ -10107,7 +10107,7 @@
             "description": "'BrightBlue' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#3b8eea}"
@@ -10123,7 +10123,7 @@
             "description": "'BrightMagenta' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#d670d6}"
@@ -10139,7 +10139,7 @@
             "description": "'BrightCyan' ANSI color in the terminal.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#29b8db}"
@@ -10397,7 +10397,7 @@
             "description": "Background color for the embedded editors on the Interactive Playground.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#00000066}"
@@ -10512,7 +10512,7 @@
             "description": "Color for resources with conflicts.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#e4676b}"
@@ -10528,7 +10528,7 @@
             "description": "Color for submodule resources.",
             "oneOf": [
                 {
-                    "$ref": "yaml-color-theme-defs.yml",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
                     "defaultSnippets": [
                         {
                             "body": "${1:#8db9e2}"
@@ -10554,7 +10554,7 @@
     },
     "$defs": {
         "_0": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#cccccc}"
@@ -10567,7 +10567,7 @@
             "description": "Use the default color."
         },
         "_2": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#cccccc80}"
@@ -10575,7 +10575,7 @@
             ]
         },
         "_3": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#f85149}"
@@ -10583,7 +10583,7 @@
             ]
         },
         "_4": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#9d9d9d}"
@@ -10591,7 +10591,7 @@
             ]
         },
         "_5": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#0078d4}"
@@ -10599,7 +10599,7 @@
             ]
         },
         "_6": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ff0000}"
@@ -10607,7 +10607,7 @@
             ]
         },
         "_7": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#4daafc}"
@@ -10615,7 +10615,7 @@
             ]
         },
         "_8": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#3c3c3c}"
@@ -10623,7 +10623,7 @@
             ]
         },
         "_9": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#2b2b2b}"
@@ -10631,7 +10631,7 @@
             ]
         },
         "_10": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#616161}"
@@ -10639,7 +10639,7 @@
             ]
         },
         "_11": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#f8f8f8}"
@@ -10647,7 +10647,7 @@
             ]
         },
         "_12": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#000000}"
@@ -10655,7 +10655,7 @@
             ]
         },
         "_13": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#cca700}"
@@ -10663,7 +10663,7 @@
             ]
         },
         "_14": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#f14c4c}"
@@ -10671,7 +10671,7 @@
             ]
         },
         "_15": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#79797966}"
@@ -10679,7 +10679,7 @@
             ]
         },
         "_16": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#646464b3}"
@@ -10687,7 +10687,7 @@
             ]
         },
         "_17": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#bfbfbf66}"
@@ -10695,7 +10695,7 @@
             ]
         },
         "_18": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#bfbfbf33}"
@@ -10703,7 +10703,7 @@
             ]
         },
         "_19": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#1f1f1f}"
@@ -10711,7 +10711,7 @@
             ]
         },
         "_20": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#2a2d2e}"
@@ -10719,7 +10719,7 @@
             ]
         },
         "_21": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#202020}"
@@ -10727,7 +10727,7 @@
             ]
         },
         "_22": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#454545}"
@@ -10735,7 +10735,7 @@
             ]
         },
         "_23": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ff0000}"
@@ -10745,7 +10745,7 @@
             "patternErrorMessage": "This color must be transparent or it will obscure content"
         },
         "_24": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#3794ff}"
@@ -10753,7 +10753,7 @@
             ]
         },
         "_25": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#4e94ce}"
@@ -10761,7 +10761,7 @@
             ]
         },
         "_26": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#264f78}"
@@ -10769,7 +10769,7 @@
             ]
         },
         "_27": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ffffff}"
@@ -10777,7 +10777,7 @@
             ]
         },
         "_28": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ea5c0055}"
@@ -10787,7 +10787,7 @@
             "patternErrorMessage": "This color must be transparent or it will obscure content"
         },
         "_29": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#262626}"
@@ -10795,7 +10795,7 @@
             ]
         },
         "_30": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#969696}"
@@ -10803,7 +10803,7 @@
             ]
         },
         "_31": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#6161611a}"
@@ -10811,7 +10811,7 @@
             ]
         },
         "_32": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ffcc00}"
@@ -10819,7 +10819,7 @@
             ]
         },
         "_33": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#75beff}"
@@ -10827,7 +10827,7 @@
             ]
         },
         "_34": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ff000033}"
@@ -10837,7 +10837,7 @@
             "patternErrorMessage": "This color must be transparent or it will obscure content"
         },
         "_35": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#cccccc33}"
@@ -10845,7 +10845,7 @@
             ]
         },
         "_36": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#181818}"
@@ -10853,7 +10853,7 @@
             ]
         },
         "_37": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#0000005c}"
@@ -10861,7 +10861,7 @@
             ]
         },
         "_38": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#313131}"
@@ -10869,7 +10869,7 @@
             ]
         },
         "_39": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#5a5d5e50}"
@@ -10877,7 +10877,7 @@
             ]
         },
         "_40": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#e0e0e0}"
@@ -10885,7 +10885,7 @@
             ]
         },
         "_41": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#00000000}"
@@ -10895,7 +10895,7 @@
             "patternErrorMessage": "This color must be transparent or it will obscure content"
         },
         "_42": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ff1212b3}"
@@ -10903,7 +10903,7 @@
             ]
         },
         "_43": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#89d185}"
@@ -10911,7 +10911,7 @@
             ]
         },
         "_44": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#b180d7}"
@@ -10919,7 +10919,7 @@
             ]
         },
         "_45": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#2488db}"
@@ -10927,7 +10927,7 @@
             ]
         },
         "_46": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#5a5d5e80}"
@@ -10935,7 +10935,7 @@
             ]
         },
         "_47": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#2489db82}"
@@ -10943,7 +10943,7 @@
             ]
         },
         "_48": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#989898}"
@@ -10951,7 +10951,7 @@
             ]
         },
         "_49": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#007acc}"
@@ -10959,7 +10959,7 @@
             ]
         },
         "_50": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#b89500}"
@@ -10967,7 +10967,7 @@
             ]
         },
         "_51": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#be1100}"
@@ -10975,7 +10975,7 @@
             ]
         },
         "_52": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ffffff66}"
@@ -10983,7 +10983,7 @@
             ]
         },
         "_53": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#026ec1}"
@@ -10991,7 +10991,7 @@
             ]
         },
         "_54": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ffffff33}"
@@ -10999,7 +10999,7 @@
             ]
         },
         "_55": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#04395e}"
@@ -11007,7 +11007,7 @@
             ]
         },
         "_56": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#37373d}"
@@ -11015,7 +11015,7 @@
             ]
         },
         "_57": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#2aaaff}"
@@ -11023,7 +11023,7 @@
             ]
         },
         "_58": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#00000000}"
@@ -11031,7 +11031,7 @@
             ]
         },
         "_59": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#8c8c8c}"
@@ -11039,7 +11039,7 @@
             ]
         },
         "_60": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#cccccc0a}"
@@ -11047,7 +11047,7 @@
             ]
         },
         "_61": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#222222}"
@@ -11055,7 +11055,7 @@
             ]
         },
         "_62": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#aeafad}"
@@ -11063,7 +11063,7 @@
             ]
         },
         "_63": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#010409}"
@@ -11071,7 +11071,7 @@
             ]
         },
         "_64": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ffffff56}"
@@ -11079,7 +11079,7 @@
             ]
         },
         "_65": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ee9d28}"
@@ -11087,7 +11087,7 @@
             ]
         },
         "_66": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#252526}"
@@ -11095,7 +11095,7 @@
             ]
         },
         "_67": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#bb800966}"
@@ -11103,7 +11103,7 @@
             ]
         },
         "_68": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ff000029}"
@@ -11113,7 +11113,7 @@
             "patternErrorMessage": "This color must be transparent or it will obscure content"
         },
         "_69": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ff000033}"
@@ -11121,7 +11121,7 @@
             ]
         },
         "_70": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#9ccc2c33}"
@@ -11129,7 +11129,7 @@
             ]
         },
         "_71": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#f14c4c1a}"
@@ -11137,7 +11137,7 @@
             ]
         },
         "_72": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#3794ff1a}"
@@ -11145,7 +11145,7 @@
             ]
         },
         "_73": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ff00004d}"
@@ -11153,7 +11153,7 @@
             ]
         },
         "_74": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#575757b8}"
@@ -11163,7 +11163,7 @@
             "patternErrorMessage": "This color must be transparent or it will obscure content"
         },
         "_75": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ffffff80}"
@@ -11171,7 +11171,7 @@
             ]
         },
         "_76": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#3399cc80}"
@@ -11179,7 +11179,7 @@
             ]
         },
         "_77": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ffffff17}"
@@ -11187,7 +11187,7 @@
             ]
         },
         "_78": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#53595d80}"
@@ -11195,7 +11195,7 @@
             ]
         },
         "_79": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#15202b}"
@@ -11203,7 +11203,7 @@
             ]
         },
         "_80": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#5c98cda0}"
@@ -11211,7 +11211,7 @@
             ]
         },
         "_81": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#3a7fbca0}"
@@ -11219,7 +11219,7 @@
             ]
         },
         "_82": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#d7d7d7}"
@@ -11227,7 +11227,7 @@
             ]
         },
         "_83": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#e7e7e7}"
@@ -11235,7 +11235,7 @@
             ]
         },
         "_84": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#9ccc2c1f}"
@@ -11243,7 +11243,7 @@
             ]
         },
         "_85": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#cccccc99}"
@@ -11251,7 +11251,7 @@
             ]
         },
         "_86": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#ffffff1a}"
@@ -11259,7 +11259,7 @@
             ]
         },
         "_87": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#e2c08d}"
@@ -11267,7 +11267,7 @@
             ]
         },
         "_88": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#0078d41a}"
@@ -11275,7 +11275,7 @@
             ]
         },
         "_89": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#2ea043}"
@@ -11283,7 +11283,7 @@
             ]
         },
         "_90": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#81b88b}"
@@ -11291,7 +11291,7 @@
             ]
         },
         "_91": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#c74e39}"
@@ -11299,7 +11299,7 @@
             ]
         },
         "_92": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#848484}"
@@ -11307,7 +11307,7 @@
             ]
         },
         "_93": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#73c991}"
@@ -11315,7 +11315,7 @@
             ]
         },
         "_94": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#f14c4cb3}"
@@ -11323,7 +11323,7 @@
             ]
         },
         "_95": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#848484b3}"
@@ -11331,7 +11331,7 @@
             ]
         },
         "_96": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#f48771}"
@@ -11350,7 +11350,7 @@
             ]
         },
         "_98": {
-            "$ref": "yaml-color-theme-defs.yml",
+            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
             "defaultSnippets": [
                 {
                     "body": "${1:#e5e5e5}"
