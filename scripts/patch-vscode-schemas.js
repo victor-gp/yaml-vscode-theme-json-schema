@@ -21,7 +21,7 @@ module.exports = async () => {
         const schemaString = await fsp.readFile(schemaPath, 'utf-8');
         const schema = JSON.parse(schemaString);
 
-        let newSchema = adaptIncompatibleBits(schema);
+        let newSchema = adaptIncompatibleBits(schema, schemaFile);
         if (schemaPath.endsWith('color-theme.json')) {
             newSchema = addMainSchemaAnnotations(newSchema);
         }
@@ -37,15 +37,15 @@ if (require.main === module) {
     module.exports();
 }
 
-function adaptIncompatibleBits(schema) {
-    schema = replaceVscodeUris(schema);
-    schema = replaceColorHexTypes(schema);
-
-    for (const key in schema) {
-        if (typeof schema[key] === 'object')
-            schema[key] = adaptIncompatibleBits(schema[key]);
+function adaptIncompatibleBits(schemaAST, schemaName) {
+    schemaAST = replaceVscodeUris(schemaAST);
+    schemaAST = replaceColorHexTypes(schemaAST, schemaName);
+    for (const key in schemaAST) {
+        if (typeof schemaAST[key] === 'object') {
+            schemaAST[key] = adaptIncompatibleBits(schemaAST[key], schemaName);
+        }
     }
-    return schema;
+    return schemaAST;
 }
 
 // the original schemas come with $ref URIs like "vscode://schemas/workbench-colors",
@@ -58,10 +58,7 @@ function replaceVscodeUris(schema) {
     return schema;
 }
 
-//fixme: nulls are only allowed on "colors:"" keys (workbench). cf: generate.js#L39.
-//      Update this to only apply it to "colors:".
-//      Actually, I need to duplicate this to have both yalm-workbench-color-property & yaml-token-color-property (no nulls).
-//nice: It does make sense to extend tokenColors (syntax)...
+//nice: It does make sense to extend tokenColors (syntax) to be nullable too...
 //      use cases: annotate alternatives, TBD; annotate default values.
 //      Algorithm: if !color && !fontStyle: remove the whole theming rule; if any exists: keep it but remove empty keys
 //      Then I should also replaceFontStyleTypes() in adaptIncompatibleBits() to allow null.
@@ -69,17 +66,19 @@ function replaceVscodeUris(schema) {
 // - null values: usually placeholders for a color setting
 // - !alpha tags with color-hex + alpha channel
 // our custom yaml-color-hex schema covers them
-function replaceColorHexTypes(schema, parents = []) {
-    if (schema['type'] === 'string' && schema['format'] === 'color-hex') {
-        delete schema['type'];
-        delete schema['format'];
-        schema = {
+function replaceColorHexTypes(schemaAST, schemaName) {
+    //todo do these need to be [] access, can't I use object.properties?
+    if (schemaAST['type'] === 'string' && schemaAST['format'] === 'color-hex') {
+        delete schemaAST['type'];
+        delete schemaAST['format'];
+        const def = schemaName === 'workbench-colors.json' ? 'nullableColor' : 'color';
+        schemaAST = {
             //todo: better transform this to plain json here, don't tempt luck
-            '$ref': 'yaml-color-theme-defs.yml#/properties/nullableColor',
-            ...schema
+            '$ref': `yaml-color-theme-defs.yml#/properties/${def}`,
+            ...schemaAST
         };
     }
-    return schema;
+    return schemaAST;
 }
 
 // prevents the looong absolute path to the schema from showing in the status bar

@@ -539,7 +539,7 @@
             "description": "Colors and styles for the token.",
             "properties": {
                 "foreground": {
-                    "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor",
+                    "$ref": "yaml-color-theme-defs.yml#/properties/color",
                     "description": "Foreground color for the token.",
                     "default": "#ff0000"
                 },
@@ -633,7 +633,7 @@
     },
     "$defs": {
         "_0": {
-            "$ref": "yaml-color-theme-defs.yml#/properties/nullableColor"
+            "$ref": "yaml-color-theme-defs.yml#/properties/color"
         },
         "_1": {
             "$ref": "#/definitions/style"
