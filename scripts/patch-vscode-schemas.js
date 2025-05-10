@@ -16,20 +16,20 @@ const DEST_DIR = path.join(SCHEMAS_DIR, 'v1.0');
 
 // PRE: the JSON Schemas for the current version of VS Code are already in schemas/v0.
 module.exports = async () => {
-    for (const schemaFile of SCHEMAS) {
-        const schemaPath = path.join(SRC_DIR, schemaFile);
-        const schemaString = await fsp.readFile(schemaPath, 'utf-8');
-        const schema = JSON.parse(schemaString);
+    for (const schemaFilename of SCHEMAS) {
+        const schemaPath = path.join(SRC_DIR, schemaFilename);
+        const schemaRaw = await fsp.readFile(schemaPath, 'utf-8');
+        const schemaAST = JSON.parse(schemaRaw);
 
-        let newSchema = adaptIncompatibleBits(schema, schemaFile);
-        if (schemaPath.endsWith('color-theme.json')) {
-            newSchema = addMainSchemaAnnotations(newSchema);
+        let newSchemaAST = adaptIncompatibleBits(schemaAST, schemaFilename);
+        if (schemaFilename === 'color-theme.json') {
+            newSchemaAST = addMainSchemaAnnotations(newSchemaAST);
         }
 
         //nice: configure format in config.json
-        const newSchemaString = JSON.stringify(newSchema, null, 4);
-        const newSchemaPath = path.join(DEST_DIR, schemaFile);
-        await fsp.writeFile(newSchemaPath, newSchemaString);
+        const newSchemaRaw = JSON.stringify(newSchemaAST, null, 4);
+        const newSchemaPath = path.join(DEST_DIR, schemaFilename);
+        await fsp.writeFile(newSchemaPath, newSchemaRaw);
     }
 };
 
@@ -37,12 +37,12 @@ if (require.main === module) {
     module.exports();
 }
 
-function adaptIncompatibleBits(schemaAST, schemaName) {
+function adaptIncompatibleBits(schemaAST, schemaFilename) {
     schemaAST = replaceVscodeUris(schemaAST);
-    schemaAST = replaceColorHexTypes(schemaAST, schemaName);
+    schemaAST = replaceColorHexTypes(schemaAST, schemaFilename);
     for (const key in schemaAST) {
         if (typeof schemaAST[key] === 'object') {
-            schemaAST[key] = adaptIncompatibleBits(schemaAST[key], schemaName);
+            schemaAST[key] = adaptIncompatibleBits(schemaAST[key], schemaFilename);
         }
     }
     return schemaAST;
@@ -50,12 +50,12 @@ function adaptIncompatibleBits(schemaAST, schemaName) {
 
 // the original schemas come with $ref URIs like "vscode://schemas/workbench-colors",
 // replace them for relative paths (no dirname as they're in the same directory)
-function replaceVscodeUris(schema) {
-    if (schema['$ref'] && schema['$ref'].startsWith('vscode://schemas/')) {
-        const relativePath = schema['$ref'].replace('vscode://schemas/', '') + '.json';
-        schema['$ref'] = relativePath;
+function replaceVscodeUris(schemaAST) {
+    if (schemaAST['$ref'] && schemaAST['$ref'].startsWith('vscode://schemas/')) {
+        const relativePath = schemaAST['$ref'].replace('vscode://schemas/', '') + '.json';
+        schemaAST['$ref'] = relativePath;
     }
-    return schema;
+    return schemaAST;
 }
 
 //nice: It does make sense to extend tokenColors (syntax) to be nullable too...
@@ -66,12 +66,12 @@ function replaceVscodeUris(schema) {
 // - null values: usually placeholders for a color setting
 // - !alpha tags with color-hex + alpha channel
 // our custom yaml-color-hex schema covers them
-function replaceColorHexTypes(schemaAST, schemaName) {
+function replaceColorHexTypes(schemaAST, schemaFilename) {
     //todo do these need to be [] access, can't I use object.properties?
     if (schemaAST['type'] === 'string' && schemaAST['format'] === 'color-hex') {
         delete schemaAST['type'];
         delete schemaAST['format'];
-        const def = schemaName === 'workbench-colors.json' ? 'nullableColor' : 'color';
+        const def = schemaFilename === 'workbench-colors.json' ? 'nullableColor' : 'color';
         schemaAST = {
             //todo: better transform this to plain json here, don't tempt luck
             '$ref': `yaml-color-theme-defs.yml#/properties/${def}`,
