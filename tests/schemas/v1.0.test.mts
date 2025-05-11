@@ -1,6 +1,6 @@
 import { expect, test } from "vitest";
+import { ajvTest, addHexColorFormat } from "../utils/ajv.mjs";
 import Ajv from "ajv"; // JSON Schema draft-07 by default
-import type { Schema } from "ajv";
 import { readFile } from 'fs/promises';
 import { isSeq, parse as parseYaml } from 'yaml';
 import type { CollectionTag, SchemaOptions, YAMLSeq } from 'yaml';
@@ -20,40 +20,7 @@ const alphaTag: CollectionTag = {
 }
 const schemaOptions: SchemaOptions = { customTags: [alphaTag] };
 
-test("actual schema validates ok", async() => {
-  const schemaFilenames = ['color-theme.json', 'workbench-colors.json', 'textmate-colors.json', 'token-styling.json', 'yaml-color-theme-defs.yml'];
-  const schemasPathRoot = path.join(__dirname, '..', '..', 'schemas', 'v1.0');
-  const schemasUriRoot = "http://example.com/schemas/";
-  const schemaTuples = await Promise.all(schemaFilenames.map(async (filename) => {
-    const schemaPath = path.join(schemasPathRoot, filename);
-    const schemaRaw = await readFile(schemaPath, 'utf8');
-    const parseFn: (src: string) => Schema =
-      filename.endsWith(".json") ? JSON.parse : parseYaml;
-    const schemaAST = parseFn(schemaRaw);
-    const schemaURI = schemasUriRoot + filename; //nit: URI.join?
-    return [ schemaURI, schemaAST ];
-  }));
-  const schemas = Object.fromEntries(schemaTuples);
-
-  // patch this because it works on vscode but not on ajv
-  delete schemas[schemasUriRoot + 'color-theme.json'].properties.colors.additionalProperties;
-  schemas[schemasUriRoot + 'workbench-colors.json'].additionalProperties = false;
-
-  const ajvOptions = {
-    // silence "property comment matches pattern xyz" compilation error
-    allowMatchingProperties: true,
-    // silence 'missing "string" for keyword "pattern"' logs in vscode-owned schemas
-    strictTypes: false,
-    schemas,
-    // verbose: true,
-  };
-  const ajv = new Ajv(ajvOptions);
-  ajv.addVocabulary(["allowComments", "allowTrailingCommas", "defaultSnippets", "deprecationMessage", "patternErrorMessage", ]);
-  const hexDigit = "[0-9a-fA-F]";
-  const colorHexRegex = new RegExp(`^#(${hexDigit}{3}|${hexDigit}{4}|${hexDigit}{6}|${hexDigit}{8})$`);
-  ajv.addFormat("color-hex", colorHexRegex);
-  const validate = ajv.getSchema("http://example.com/schemas/color-theme.json");
-
+ajvTest("actual schema validates ok", async ({ validate }) => {
   const themePath = path.join(__dirname, '..', 'fixtures', 'Lucario-Theme.v2.3.3.yml');
   const themeRaw = await readFile(themePath, 'utf8');
   const themeObj = await parseYaml(themeRaw, schemaOptions);
@@ -76,9 +43,7 @@ test("the defs sub-schema (owned) doesn't error when compiling with AJV strict m
     // verbose: true,
   };
   const ajv = new Ajv(ajvOptions);
-  const hexDigit = "[0-9a-fA-F]";
-  const colorHexRegex = new RegExp(`^#(${hexDigit}{3}|${hexDigit}{4}|${hexDigit}{6}|${hexDigit}{8})$`);
-  ajv.addFormat("color-hex", colorHexRegex);
+  addHexColorFormat(ajv);
 
   expect(() => ajv.compile(schemaAST)).not.toThrow();
 })
