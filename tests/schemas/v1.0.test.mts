@@ -31,6 +31,32 @@ ajvTest("actual schema validates ok", async ({ validate }) => {
   expect(validationResult).toBe(true);
 });
 
+ajvTest("colors (workbench) properties can be null", async({ validate }) => {
+  const themeAST = { colors: { foreground: null } };
+  expect(validate(themeAST)).toBe(true);
+});
+
+ajvTest("tokenColors properties cannot be null", async({ validate }) => {
+  const themeAST = { tokenColors: {
+    scope: "comment",
+    settings: { foreground: null }
+  } };
+  expect(validate(themeAST)).toBe(false);
+
+  //nit: errors are really unimformative, and the fault lies on our yaml-defs
+  // console.log(validate.errors);
+});
+
+ajvTest("semanticTokenColors properties cannot be null", async({ validate }) => {
+  const themeAST = { semanticTokenColors: {
+    scope: "comment",
+    settings: { foreground: null }
+  } };
+  expect(validate(themeAST)).toBe(false);
+});
+
+//todo add !alpha tests, when we have a stricter def for that
+
 test("the defs sub-schema (owned) doesn't error when compiling with AJV strict mode", async() => {
   const schemaFilename = 'yaml-color-theme-defs.yml';
   const schemasPathRoot = path.join(__dirname, '..', '..', 'schemas', 'v1.0');
