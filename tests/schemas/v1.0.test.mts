@@ -20,12 +20,12 @@ const alphaTag: CollectionTag = {
 }
 const schemaOptions: SchemaOptions = { customTags: [alphaTag] };
 
-ajvTest("actual schema validates ok", async ({ validate }) => {
+ajvTest("v1 schema validates Lucario Theme", async ({ validate }) => {
   const themePath = path.join(__dirname, '..', 'fixtures', 'Lucario-Theme.v2.3.3.yml');
   const themeRaw = await readFile(themePath, 'utf8');
-  const themeObj = await parseYaml(themeRaw, schemaOptions);
+  const themeAST = await parseYaml(themeRaw, schemaOptions);
 
-  const validationResult = validate(themeObj);
+  const validationResult = validate(themeAST);
   //nice: consider https://www.npmjs.com/package/@segment/ajv-human-errors
   if (validate.errors) console.log(validate.errors);
   expect(validationResult).toBe(true);
