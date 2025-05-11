@@ -57,6 +57,16 @@ ajvTest("semanticTokenColors properties cannot be null", async({ validate }) => 
 
 //todo add !alpha tests, when we have a stricter def for that
 
+ajvTest("tokenColors cannot have properties with random names", async({ validate }) => {
+  const themeAST = { colors: { random: "#000" } };
+  expect(validate(themeAST)).toBe(false);
+  expect(validate.errors[0].instancePath).toBe("/colors");
+  expect(validate.errors[0].keyword).toBe("additionalProperties");
+  expect(validate.errors[0].message).toBe("must NOT have additional properties");
+});
+
+//nit it seems that semanticTokenColors (token-styling.json) are also allowlisted?
+
 test("the defs sub-schema (owned) doesn't error when compiling with AJV strict mode", async() => {
   const schemaFilename = 'yaml-color-theme-defs.yml';
   const schemasPathRoot = path.join(__dirname, '..', '..', 'schemas', 'v1.0');
@@ -73,5 +83,3 @@ test("the defs sub-schema (owned) doesn't error when compiling with AJV strict m
 
   expect(() => ajv.compile(schemaAST)).not.toThrow();
 })
-
-//todo: test schemas with additional properties (should fail validation)
