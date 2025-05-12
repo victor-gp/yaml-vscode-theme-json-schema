@@ -1,0 +1,23 @@
+type: object
+
+properties:
+  nullableColor:
+    anyOf:
+      - $ref: "#/properties/color"
+      # empty keys are removed in the yaml-json conversion
+      - type: "null"
+
+  color:
+    anyOf:
+      - $ref: "#/$defs/colorHex"
+      # !alpha custom tags
+      - type: array
+        minItems: 2
+        maxItems: 2
+
+$defs:
+  # single allowed type in color-theme.json for color properties
+  colorHex:
+    type: string
+    # custom format, vscode built-in
+    format: color-hex
