@@ -72,3 +72,8 @@ export const ajvTest = test.extend<AjvTestContext>({
     validateFn.errors = null;
   }
 })
+
+export function logErrors(validate: ValidateFunction, ast) {
+  validate(ast);
+  console.debug(validate.errors);
+}

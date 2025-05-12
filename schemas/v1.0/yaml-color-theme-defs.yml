@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://json-schema.org/draft-07/schema
+
 type: object
 
 properties:
@@ -10,10 +12,7 @@ properties:
   color:
     anyOf:
       - $ref: "#/$defs/colorHex"
-      # !alpha custom tags
-      - type: array
-        minItems: 2
-        maxItems: 2
+      - $ref: "#/$defs/alphaTag"
 
 $defs:
   # single allowed type in color-theme.json for color properties
@@ -21,3 +20,55 @@ $defs:
     type: string
     # custom format, vscode built-in
     format: color-hex
+
+  # !alpha custom tag
+  alphaTag:
+    # the "!alpha" token is stripped by the yaml parser
+    anyOf:
+      - $ref: "#/$defs/longAlphaArray"
+      - $ref: "#/$defs/shortAlphaArray"
+
+  # [#rrggbb, aa]
+  longAlphaArray:
+    type: array
+    minItems: 2
+    maxItems: 2
+    items:
+      - $ref: "#/$defs/longHexRgb"
+      - $ref: "#/$defs/longHexAlpha"
+
+  longHexRgb:
+    type: string
+    pattern: "^#[0-9a-fA-F]{6}$"
+
+  longHexAlpha:
+    anyOf:
+      - type: string
+        pattern: '^[0-9a-fA-F]{2}$'
+      - type: integer
+        # The YAML->JSON conversion concatenates Rgb and Alpha (as string).
+        # If Alpha is single digit, the result would be an invalid "#rrggbba"
+        # To represent single-digit values, surround them by quotes: "00"
+        minimum: 10
+        maximum: 99
+
+  # [#rgb, a]
+  shortAlphaArray:
+    type: array
+    minItems: 2
+    maxItems: 2
+    items:
+      - $ref: "#/$defs/shortHexRgb"
+      - $ref: "#/$defs/shortHexAlpha"
+
+  shortHexRgb:
+    type: string
+    pattern: "^#[0-9a-fA-F]{3}$"
+
+  shortHexAlpha:
+    anyOf:
+      - type: string
+        pattern: '^[0-9a-fA-F]$'
+      - type: integer
+        minimum: 0
+        maximum: 9
