@@ -1,5 +1,5 @@
 import { expect, test } from "vitest";
-import { ajvTest, addHexColorFormat } from "../utils/ajv.mjs";
+import { ajvTest, addHexColorFormat } from "../utils/ajv.js";
 import Ajv from "ajv"; // JSON Schema draft-07 by default
 import { readFile } from 'fs/promises';
 import { isSeq, parse as parseYaml } from 'yaml';

@@ -1,4 +1,4 @@
-//todo transform to ESM and make the package type=module
+//nice transform to ESM
 const fsp = require('fs/promises');
 const path = require('path');
 

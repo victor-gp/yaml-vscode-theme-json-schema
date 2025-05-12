@@ -2,8 +2,9 @@
   "name": "yaml-vscode-theme-json-schema",
   "version": "0.1.0",
   "description": "JSON Schema for VS Code themes written in YAML",
+  "type": "module",
   "scripts": {
-    "patch": "node ./scripts/patch-vscode-schemas.js",
+    "patch": "node ./scripts/patch-vscode-schemas.cjs",
     "test": "vitest"
   },
   "devDependencies": {
