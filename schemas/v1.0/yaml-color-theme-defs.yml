@@ -15,7 +15,7 @@ properties:
       - type: "null"
 
 $defs:
-  # single allowed type for color properties in color-theme.json
+  # single allowed type for color properties in color-theme.json (v0)
   colorHex:
     type: string
     # custom format, vscode built-in

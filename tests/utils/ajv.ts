@@ -11,7 +11,7 @@ let schemasMemo;
 async function schemas() {
   if (schemasMemo) return schemasMemo;
 
-  const schemaFilenames = ['color-theme.json', 'workbench-colors.json', 'textmate-colors.json', 'token-styling.json', 'yaml-color-theme-defs.yml'];
+  const schemaFilenames = ['yaml-color-theme.json', 'workbench-colors.json', 'textmate-colors.json', 'token-styling.json', 'yaml-color-theme-defs.yml'];
   const schemasPathRoot = path.join(__dirname, '..', '..', 'schemas', 'v1.0');
   const schemasUriRoot = "http://example.com/schemas/";
 
@@ -27,7 +27,7 @@ async function schemas() {
   const schemas = Object.fromEntries(schemaTuples);
 
   // patch this because it works on vscode but not on ajv
-  delete schemas[schemasUriRoot + 'color-theme.json'].properties.colors.additionalProperties;
+  delete schemas[schemasUriRoot + 'yaml-color-theme.json'].properties.colors.additionalProperties;
   schemas[schemasUriRoot + 'workbench-colors.json'].additionalProperties = false;
 
   schemasMemo = schemas;
@@ -57,7 +57,7 @@ async function validate() {
     ajv.addVocabulary(["allowComments", "allowTrailingCommas", "defaultSnippets", "deprecationMessage", "patternErrorMessage", ]);
     addHexColorFormat(ajv);
 
-    validateMemo = ajv.getSchema("http://example.com/schemas/color-theme.json");
+    validateMemo = ajv.getSchema("http://example.com/schemas/yaml-color-theme.json");
     return validateMemo;
 }
 

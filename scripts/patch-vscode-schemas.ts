@@ -4,7 +4,7 @@ import * as url from 'node:url';
 
 //nice: configure all of this in config.json
 const SCHEMAS = [
-    'color-theme.json', //nice TBD rename this root schema to `yaml-color-theme.json` ?
+    'color-theme.json',
     'textmate-colors.json',
     'token-styling.json',
     'workbench-colors.json',
@@ -21,14 +21,16 @@ export default async function main() {
         const schemaRaw = await readFile(schemaPath, 'utf-8');
         const schemaAST = JSON.parse(schemaRaw);
 
+        let newSchemaFilename = schemaFilename;
         let newSchemaAST = adaptIncompatibleBits(schemaAST, schemaFilename);
         if (schemaFilename === 'color-theme.json') {
+            newSchemaFilename = 'yaml-color-theme.json';
             newSchemaAST = addMainSchemaAnnotations(newSchemaAST);
         }
 
         //nice: configure format in config.json
         const newSchemaRaw = JSON.stringify(newSchemaAST, null, 4);
-        const newSchemaPath = path.join(DEST_DIR, schemaFilename);
+        const newSchemaPath = path.join(DEST_DIR, newSchemaFilename);
         await writeFile(newSchemaPath, newSchemaRaw);
     }
 };
