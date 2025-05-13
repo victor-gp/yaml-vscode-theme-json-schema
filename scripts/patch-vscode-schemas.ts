@@ -35,10 +35,11 @@ export default async function main() {
     }
 };
 
+// are we main? is this running as a node script?
 if (import.meta.url.startsWith('file:')) {
     const modulePath = url.fileURLToPath(import.meta.url);
     if (process.argv[1] === modulePath) {
-        main();
+        await main();
     }
 }
 
