@@ -1,0 +1,101 @@
+{
+    "type": "object",
+    "properties": {
+        "color": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/colorHex"
+                },
+                {
+                    "$ref": "#/$defs/alphaTag"
+                }
+            ]
+        },
+        "nullableColor": {
+            "anyOf": [
+                {
+                    "$ref": "#/properties/color"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        }
+    },
+    "$defs": {
+        "colorHex": {
+            "type": "string",
+            "format": "color-hex"
+        },
+        "alphaTag": {
+            "anyOf": [
+                {
+                    "$ref": "#/$defs/longAlphaArray"
+                },
+                {
+                    "$ref": "#/$defs/shortAlphaArray"
+                }
+            ]
+        },
+        "longAlphaArray": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": [
+                {
+                    "$ref": "#/$defs/longHexRgb"
+                },
+                {
+                    "$ref": "#/$defs/longHexAlpha"
+                }
+            ]
+        },
+        "longHexRgb": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "longHexAlpha": {
+            "anyOf": [
+                {
+                    "type": "string",
+                    "pattern": "^[0-9a-fA-F]{2}$"
+                },
+                {
+                    "type": "integer",
+                    "minimum": 10,
+                    "maximum": 99
+                }
+            ]
+        },
+        "shortAlphaArray": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": [
+                {
+                    "$ref": "#/$defs/shortHexRgb"
+                },
+                {
+                    "$ref": "#/$defs/shortHexAlpha"
+                }
+            ]
+        },
+        "shortHexRgb": {
+            "type": "string",
+            "pattern": "^#[0-9a-fA-F]{3}$"
+        },
+        "shortHexAlpha": {
+            "anyOf": [
+                {
+                    "type": "string",
+                    "pattern": "^[0-9a-fA-F]$"
+                },
+                {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9
+                }
+            ]
+        }
+    }
+}

@@ -77,8 +77,7 @@ function replaceColorHexTypes(schemaAST, schemaFilename) {
         delete schemaAST.format;
         const def = schemaFilename === 'workbench-colors.json' ? 'nullableColor' : 'color';
         schemaAST = {
-            //todo: better transform this to plain json here, don't tempt luck
-            '$ref': `yaml-color-theme-defs.yml#/properties/${def}`,
+            '$ref': `yaml-color-theme-defs.json#/properties/${def}`,
             ...schemaAST
         };
     }

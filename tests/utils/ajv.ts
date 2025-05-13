@@ -11,7 +11,7 @@ let schemasMemo;
 async function schemas() {
   if (schemasMemo) return schemasMemo;
 
-  const schemaFilenames = ['yaml-color-theme.json', 'workbench-colors.json', 'textmate-colors.json', 'token-styling.json', 'yaml-color-theme-defs.yml'];
+  const schemaFilenames = ['yaml-color-theme.json', 'workbench-colors.json', 'textmate-colors.json', 'token-styling.json', 'yaml-color-theme-defs.json'];
   const schemasPathRoot = path.join(__dirname, '..', '..', 'schemas', 'v1.0');
   const schemasUriRoot = "http://example.com/schemas/";
 

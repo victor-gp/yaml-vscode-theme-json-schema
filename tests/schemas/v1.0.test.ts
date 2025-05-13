@@ -184,7 +184,7 @@ ajvTest("'!alpha [#rgb, a]' can have 'a' of type integer", async({ validate }) =
 });
 
 test("the defs sub-schema (owned) doesn't error when compiling with AJV strict mode", async() => {
-  const schemaFilename = 'yaml-color-theme-defs.yml';
+  const schemaFilename = 'yaml-color-theme-defs.json';
   const schemasPathRoot = path.join(__dirname, '..', '..', 'schemas', 'v1.0');
   const schemaPath = path.join(schemasPathRoot, schemaFilename);
   const schemaRaw = await readFile(schemaPath, 'utf8');
