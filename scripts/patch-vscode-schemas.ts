@@ -72,10 +72,9 @@ function replaceVscodeUris(schemaAST) {
 // - !alpha tags with color-hex + alpha channel
 // our custom yaml-color-hex schema covers them
 function replaceColorHexTypes(schemaAST, schemaFilename) {
-    //todo do these need to be [] access, can't I use object.properties?
-    if (schemaAST['type'] === 'string' && schemaAST['format'] === 'color-hex') {
-        delete schemaAST['type'];
-        delete schemaAST['format'];
+    if (schemaAST.type === 'string' && schemaAST.format === 'color-hex') {
+        delete schemaAST.type;
+        delete schemaAST.format;
         const def = schemaFilename === 'workbench-colors.json' ? 'nullableColor' : 'color';
         schemaAST = {
             //todo: better transform this to plain json here, don't tempt luck
