@@ -3,28 +3,29 @@
 type: object
 
 properties:
+  color:
+    anyOf:
+      - $ref: "#/$defs/colorHex"
+      - $ref: "#/$defs/alphaTag"
+
   nullableColor:
     anyOf:
       - $ref: "#/properties/color"
       # empty keys are removed in the yaml-json conversion
       - type: "null"
 
-  color:
-    anyOf:
-      - $ref: "#/$defs/colorHex"
-      - $ref: "#/$defs/alphaTag"
-
 $defs:
-  # single allowed type in color-theme.json for color properties
+  # single allowed type for color properties in color-theme.json
   colorHex:
     type: string
     # custom format, vscode built-in
+    # https://github.com/Microsoft/vscode/blob/main/extensions/json-language-features/server/README.md#server-capabilities
     format: color-hex
 
   # !alpha custom tag
   alphaTag:
-    # the "!alpha" token is stripped by the yaml parser
     anyOf:
+      # the "!alpha" token is stripped by the yaml parser
       - $ref: "#/$defs/longAlphaArray"
       - $ref: "#/$defs/shortAlphaArray"
 
@@ -46,7 +47,8 @@ $defs:
       - type: string
         pattern: '^[0-9a-fA-F]{2}$'
       - type: integer
-        # The YAML->JSON conversion concatenates Rgb and Alpha (as string).
+        # Why are values 0-9 disallowed?
+        # The YAML-JSON conversion concatenates Rgb and Alpha (as string).
         # If Alpha is single digit, the result would be an invalid "#rrggbba"
         # To represent single-digit values, surround them by quotes: "00"
         minimum: 10
