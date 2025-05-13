@@ -1,6 +1,6 @@
-//nice transform to ESM
-const fsp = require('fs/promises');
-const path = require('path');
+import { readFile, writeFile } from 'fs/promises';
+import * as path from 'path';
+import * as url from 'node:url';
 
 //nice: configure all of this in config.json
 const SCHEMAS = [
@@ -9,16 +9,16 @@ const SCHEMAS = [
     'token-styling.json',
     'workbench-colors.json',
 ];
-const ROOT_DIR = path.join(__dirname, '..');
+const ROOT_DIR = path.join(import.meta.dirname, '..');
 const SCHEMAS_DIR = path.join(ROOT_DIR, 'schemas');
 const SRC_DIR = path.join(SCHEMAS_DIR, 'v0');
 const DEST_DIR = path.join(SCHEMAS_DIR, 'v1.0');
 
 // PRE: the JSON Schemas for the current version of VS Code are already in schemas/v0.
-module.exports = async () => {
+export default async function main() {
     for (const schemaFilename of SCHEMAS) {
         const schemaPath = path.join(SRC_DIR, schemaFilename);
-        const schemaRaw = await fsp.readFile(schemaPath, 'utf-8');
+        const schemaRaw = await readFile(schemaPath, 'utf-8');
         const schemaAST = JSON.parse(schemaRaw);
 
         let newSchemaAST = adaptIncompatibleBits(schemaAST, schemaFilename);
@@ -29,12 +29,15 @@ module.exports = async () => {
         //nice: configure format in config.json
         const newSchemaRaw = JSON.stringify(newSchemaAST, null, 4);
         const newSchemaPath = path.join(DEST_DIR, schemaFilename);
-        await fsp.writeFile(newSchemaPath, newSchemaRaw);
+        await writeFile(newSchemaPath, newSchemaRaw);
     }
 };
 
-if (require.main === module) {
-    module.exports();
+if (import.meta.url.startsWith('file:')) {
+    const modulePath = url.fileURLToPath(import.meta.url);
+    if (process.argv[1] === modulePath) {
+        main();
+    }
 }
 
 function adaptIncompatibleBits(schemaAST, schemaFilename) {

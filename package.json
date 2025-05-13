@@ -4,7 +4,7 @@
   "description": "JSON Schema for VS Code themes written in YAML",
   "type": "module",
   "scripts": {
-    "patch": "node ./scripts/patch-vscode-schemas.cjs",
+    "patch": "node scripts/patch-vscode-schemas.ts",
     "test": "vitest"
   },
   "devDependencies": {
